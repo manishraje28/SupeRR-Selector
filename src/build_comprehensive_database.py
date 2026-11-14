@@ -117,6 +117,7 @@ EXPLICIT_NATIONALITIES = {
     "Ottneil Baartman": ("South Africa", "RSA"),
     "Bjorn Fortuin": ("South Africa", "RSA"),
     "Lhuan Pretorius": ("South Africa", "RSA"),
+    "Faf du Plessis": ("South Africa", "RSA"),
 
     # England
     "Jos Buttler": ("England", "ENG"),
@@ -224,13 +225,21 @@ EXPLICIT_NATIONALITIES = {
 
 # Strict Pakistan Exclusion List (BCCI Policy Barred)
 PAKISTAN_PLAYERS = {
-    "Shaheen Afridi", "Shaheen Shah Afridi", "Sufiyan Muqeem", "Abrar Ahmed", "Mohammad Wasim",
-    "Mohammad Wasim (cricketer, born 2001)", "Haris Rauf", "Babar Azam", "Mohammad Rizwan",
-    "Naseem Shah", "Shadab Khan", "Fakhar Zaman", "Iftikhar Ahmed", "Imad Wasim", "Mohammad Amir",
-    "Usman Khan", "Saim Ayub", "Azam Khan", "Abbas Afridi", "Zaman Khan", "Mohammad Haris",
-    "Haseebullah Khan", "Irfan Khan", "Aamer Jamal", "Mir Hamza", "Mehran Mumtaz", "Shan Masood",
-    "Asif Ali", "Khushdil Shah", "Haider Ali", "Mohammad Nawaz", "Shahnawaz Dahani", "Faheem Ashraf",
-    "Hasan Ali", "Haris Sohail", "Yasir Shah", "Wahab Riaz", "Shoaib Malik", "Sarfraz Ahmed"
+    "Aamer Jamal", "Abbas Afridi", "Abdullah Shafique", "Abrar Ahmed", "Ahmed Daniyal", 
+    "Arafat Minhas", "Asif Ali", "Azam Khan", "Babar Azam", "Faheem Ashraf", "Fakhar Zaman", 
+    "Ghazi Ghouri", "Haider Ali", "Haris Rauf", "Hasan Ali", "Hasan Nawaz", "Haseebullah Khan", 
+    "Hussain Talat", "Iftikhar Ahmed", "Ihsanullah Ihsanullah", "Imad Wasim", "Jahandad Khan", 
+    "Khawaja Nafay", "Khurram Shehzad", "Khushdil Shah", "Maaz Sadaqat", "Mehran Mumtaz", 
+    "Mohammad Ali", "Mohammad Amir", "Mohammad Faiq", "Mohammad Haris", "Mohammad Hasnain", 
+    "Mohammad Imran Randhawa", "Mohammad Jnr", "Mohammad Naeem", "Mohammad Nawaz", 
+    "Mohammad Rizwan", "Mohammad Salman", "Mohammad Wasim", "Mohammad Wasim (cricketer, born 2001)",
+    "Mubasir Khan", "Muhammad Irfan", "Muhammad Shehzad", "Naseem Shah", "Omair Yousuf", 
+    "Qasim Akram", "Razaullah Razaullah", "Rohail Nazir", "Saad Masood", "Sahibzada Farhan", 
+    "Saim Ayub", "Salman Agha", "Salman Mirza", "Shadab Khan", "Shaheen Afridi", 
+    "Shaheen Shah Afridi", "Shahid Aziz", "Shahnawaz Dhani", "Shahnawaz Dahani", "Shan Masood", 
+    "Sufiyan Muqeem", "Tayyab Tahir", "Ubaid Shah", "Usama Mir", "Usman Khan", "Usman Qadir", 
+    "Usman Tariq", "Yasir Khan", "Zaman Khan", "Haris Sohail", "Yasir Shah", "Wahab Riaz", 
+    "Shoaib Malik", "Sarfraz Ahmed", "Mir Hamza", "Irfan Khan"
 }
 
 # 4. Known Franchise Retentions & Contract Status (Reflecting Data Pack IPL 2026 Season Mapping)
@@ -368,12 +377,22 @@ def classify_player_status(name, player_id):
             return "Capped Indian", "India"
         else:
             known_capped_indian = {
-                "Krunal Pandya", "Bhuvneshwar Kumar", "Sandeep Sharma", "Prabhsimran Singh", 
-                "Sanju Samson", "Yashasvi Jaiswal", "Riyan Parag", "Dhruv Jurel", "Yuzvendra Chahal", 
-                "Suryakumar Yadav", "Jasprit Bumrah", "Kuldeep Yadav", "Virat Kohli", "Shubman Gill", 
-                "Tilak Varma", "Abhishek Sharma", "Axar Patel", "Harshit Rana", "Nitish Kumar Reddy", 
-                "Mayank Yadav", "Rajat Patidar", "Yash Dayal", "Ravi Bishnoi", "Shivam Dube", 
-                "Ruturaj Gaikwad", "Varun Chakaravarthy", "Rinku Singh", "Ravindra Jadeja"
+                # Indian Senior International Legends & Icons
+                "Shikhar Dhawan", "Virat Kohli", "Rohit Sharma", "Mahendra Singh Dhoni", "Ajinkya Rahane", 
+                "Ambati Rayudu", "Ishant Sharma", "Bhuvneshwar Kumar", "Sandeep Sharma", "Ravindra Jadeja", 
+                "Jasprit Bumrah", "Suryakumar Yadav", "Kuldeep Yadav", "Yuzvendra Chahal", "Axar Patel", 
+                "Hardik Pandya", "Mohammed Shami", "Umesh Yadav", "Washington Sundar", "Shardul Thakur", 
+                "Deepak Chahar", "T Natarajan", "Vijay Shankar", "Wriddhiman Saha", "Manish Pandey", 
+                "Jaydev Unadkat", "Mohit Sharma", "Krunal Pandya", "Devdutt Padikkal", "Nitish Rana", 
+                "Rahul Chahar", "Mayank Markande", "Kuldeep Sen", "Sai Kishore", "Ravisrinivasan Sai Kishore",
+                
+                # Modern India Internationals
+                "Shubman Gill", "Yashasvi Jaiswal", "Riyan Parag", "Dhruv Jurel", "Rinku Singh", 
+                "Ruturaj Gaikwad", "Tilak Varma", "Namboori Tilak Varma", "Abhishek Sharma", "Sanju Samson", 
+                "Shivam Dube", "Ravi Bishnoi", "Varun Chakaravarthy", "Varun Chakravarthy", "Rajat Patidar", 
+                "Nitish Kumar Reddy", "Harshit Rana", "Mayank Yadav", "Yash Dayal", "Prabhsimran Singh", 
+                "Avesh Khan", "Prasidh Krishna", "Mukesh Kumar", "Khaleel Ahmed", "Chetan Sakariya", 
+                "Shivam Mavi"
             }
             if name in known_capped_indian:
                 return "Capped Indian", "India"
@@ -415,10 +434,12 @@ for idx, row in df_bat.iterrows():
     pid = int(row['player_id'])
     
     # STRICT EXCLUSION: Pakistan players
-    if name in PAKISTAN_PLAYERS:
+    if name in PAKISTAN_PLAYERS or (name == "Abdul Samad" and pid == 6922):
         continue
         
     capped_status, country = classify_player_status(name, pid)
+    if country == 'Pakistan':
+        continue
     if country == 'Pakistan':
         continue
         
@@ -551,10 +572,12 @@ for idx, row in df_bowl.iterrows():
     pid = int(row['player_id'])
     
     # STRICT EXCLUSION: Pakistan players
-    if name in PAKISTAN_PLAYERS:
+    if name in PAKISTAN_PLAYERS or (name == "Abdul Samad" and pid == 6922):
         continue
         
     capped_status, country = classify_player_status(name, pid)
+    if country == 'Pakistan':
+        continue
     if country == 'Pakistan':
         continue
         

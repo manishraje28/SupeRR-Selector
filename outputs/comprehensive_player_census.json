@@ -10,14 +10,14 @@
     "total_deliveries": 200999,
     "unique_strikers": 200,
     "unique_bowlers": 179,
-    "high_pressure_batters_evaluated": 189,
-    "high_pressure_bowlers_evaluated": 168,
-    "auction_target_batters": 153,
-    "auction_target_bowlers": 144,
+    "high_pressure_batters_evaluated": 187,
+    "high_pressure_bowlers_evaluated": 167,
+    "auction_target_batters": 151,
+    "auction_target_bowlers": 143,
     "rival_retained_batters": 25,
     "rival_retained_bowlers": 14,
     "rr_core_players": 21,
-    "bcci_ineligible_pakistan_players_excluded": 39
+    "bcci_ineligible_pakistan_players_excluded": 76
   },
   "model": {
     "name": "Context-Adjusted Value Added (CAVA) with Match-Level Empirical Bayes Shrinkage & Gradient Boosting ML",
