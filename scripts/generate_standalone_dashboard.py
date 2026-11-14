@@ -13,21 +13,42 @@ html_content = f"""<!DOCTYPE html>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
+    html {{
+      scroll-behavior: smooth;
+    }}
     body {{
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #070B14;
       color: #F8FAFC;
     }}
     .glass {{
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(12px);
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.08);
     }}
-    .rr-pink {{ color: #EA1A85; }}
-    .bg-rr-pink {{ background-color: #EA1A85; }}
-    .border-rr-pink {{ border-color: #EA1A85; }}
-    .rr-blue {{ color: #254AA5; }}
-    .bg-rr-blue {{ background-color: #254AA5; }}
+    select {{
+      background-color: #0F172A !important;
+      color: #F8FAFC !important;
+    }}
+    select option {{
+      background-color: #0F172A !important;
+      color: #F8FAFC !important;
+      padding: 8px 12px;
+    }}
+    ::-webkit-scrollbar {{
+      width: 6px;
+      height: 6px;
+    }}
+    ::-webkit-scrollbar-track {{
+      background: #070B14;
+    }}
+    ::-webkit-scrollbar-thumb {{
+      background: #1E293B;
+      border-radius: 9999px;
+    }}
+    ::-webkit-scrollbar-thumb:hover {{
+      background: #EA1A85;
+    }}
   </style>
 </head>
 <body class="selection:bg-pink-600 selection:text-white pb-20">
@@ -35,16 +56,18 @@ html_content = f"""<!DOCTYPE html>
   <!-- Header -->
   <header class="sticky top-0 z-50 glass border-b border-white/10 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
     <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#EA1A85] to-[#254AA5] flex items-center justify-center font-black text-xl shadow-lg">👑</div>
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#EA1A85] to-[#254AA5] flex items-center justify-center font-black text-white shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
       <div>
         <div class="flex items-center gap-2">
           <span class="font-black text-xl text-white">SupeRR Selector</span>
-          <span class="text-[10px] px-2 py-0.5 rounded-full font-bold bg-[#EA1A85]/20 text-[#EA1A85] border border-[#EA1A85]/40">ROUND 1 WAR ROOM</span>
+          <span class="text-[10px] px-2 py-0.5 rounded-full font-bold bg-[#EA1A85]/20 text-[#EA1A85] border border-[#EA1A85]/40 tracking-wider">ROUND 1 WAR ROOM</span>
         </div>
         <p class="text-xs text-slate-400">Rajasthan Royals • IPL 2027 Auction Intelligence Hub</p>
       </div>
     </div>
-    <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+    <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
       <span>1,217 Players • 200,999 Deliveries • 883 Matches Audited</span>
     </div>
   </header>
@@ -52,15 +75,15 @@ html_content = f"""<!DOCTYPE html>
   <main class="max-w-7xl mx-auto px-4 sm:px-6 pt-6 space-y-8">
 
     <!-- Hero Banner -->
-    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#EA1A85]/25 via-[#254AA5]/20 to-slate-900 border border-white/10 p-6 sm:p-8">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-[#EA1A85]/20 text-[#EA1A85] border border-[#EA1A85]/30 mb-3">
+    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#EA1A85]/20 via-[#254AA5]/15 to-slate-900 border border-white/10 p-6 sm:p-8">
+      <div class="max-w-3xl space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-[#EA1A85]/20 text-[#EA1A85] border border-[#EA1A85]/30">
           RAJASTHAN ROYALS AUCTION STRATEGY • IPL 2027
         </div>
         <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">
           Identifying the Most Reliable <span class="text-[#EA1A85]">Clutch Performers</span> Under Pressure
         </h1>
-        <p class="mt-2 text-slate-300 text-xs sm:text-sm leading-relaxed">
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
           RR already retained <strong>Samson, Jaiswal, Parag, Jurel, Hetmyer</strong>, and <strong>Sandeep Sharma</strong>. Below is the data-driven intelligence on targetable players versus rival-retained pillars to dominate the IPL 2027 Auction.
         </p>
       </div>
@@ -68,36 +91,34 @@ html_content = f"""<!DOCTYPE html>
 
     <!-- UNSTOP SUBMISSION DROPDOWN CHEAT SHEET -->
     <div class="glass p-6 rounded-2xl border border-white/10 space-y-4">
-      <div class="flex items-center justify-between flex-wrap gap-4">
-        <div>
-          <h2 class="text-xl font-black text-white">📋 Unstop Submission Dropdown Selections</h2>
-          <p class="text-xs text-slate-400">Copy these exact ordered names directly into the Unstop submission fields (Batsman 1-10 & Bowler 1-10).</p>
-        </div>
+      <div>
+        <h2 class="text-xl font-black text-white">Unstop Submission Dropdown Selections</h2>
+        <p class="text-xs text-slate-400">Copy these exact ordered names directly into the Unstop submission fields (Batsman 1-10 & Bowler 1-10).</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Set 2: RR Auction Targets -->
+        <!-- Option B: RR Auction Targets -->
         <div class="bg-slate-900/90 p-5 rounded-xl border border-emerald-500/40 space-y-3">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-black uppercase text-emerald-400 tracking-wider">👑 SET 2: RR AUCTION SHORTLIST (REALISTIC)</span>
+            <span class="text-xs font-black uppercase text-emerald-400 tracking-wider">OPTION B: RR AUCTION SHORTLIST (REALISTIC)</span>
             <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-bold">100% Targetable</span>
           </div>
           <div class="text-xs text-slate-300 space-y-1">
-            <p><strong>Top 10 Batters:</strong></p>
+            <p><strong>Top 10 Batters (Batsman 1–10):</strong></p>
             <ol class="list-decimal list-inside pl-1 text-slate-200 font-mono text-[11px] space-y-0.5">
               {"".join([f"<li>{name}</li>" for name in data["dropdown_options"]["set_2_rr_auction_targets"]["batters"]])}
             </ol>
-            <p class="pt-2"><strong>Top 10 Bowlers:</strong></p>
+            <p class="pt-2"><strong>Top 10 Bowlers (Bowler 1–10):</strong></p>
             <ol class="list-decimal list-inside pl-1 text-slate-200 font-mono text-[11px] space-y-0.5">
               {"".join([f"<li>{name}</li>" for name in data["dropdown_options"]["set_2_rr_auction_targets"]["bowlers"]])}
             </ol>
           </div>
         </div>
 
-        <!-- Set 1: Pure Statistical Benchmark -->
+        <!-- Option A: Pure Statistical Benchmark -->
         <div class="bg-slate-900/90 p-5 rounded-xl border border-blue-500/40 space-y-3">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-black uppercase text-blue-400 tracking-wider">🏆 SET 1: STATISTICAL BENCHMARK (ALL STARS)</span>
+            <span class="text-xs font-black uppercase text-blue-400 tracking-wider">OPTION A: STATISTICAL BENCHMARK (ALL STARS)</span>
             <span class="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded font-bold">Historical Truth</span>
           </div>
           <div class="text-xs text-slate-300 space-y-1">
@@ -116,12 +137,9 @@ html_content = f"""<!DOCTYPE html>
 
     <!-- 1-CLICK MATCH SITUATION SIMULATOR -->
     <div class="glass p-6 rounded-2xl border border-white/10 space-y-4">
-      <div class="flex items-center gap-3">
-        <div class="p-2.5 rounded-xl bg-[#EA1A85]/20 text-[#EA1A85]">⚡</div>
-        <div>
-          <h2 class="text-xl font-black text-white">Tactical Match Pressure Situation Simulator</h2>
-          <p class="text-xs text-slate-400">Pre-defined iconic match situations and recommended player response profiles for Rajasthan Royals.</p>
-        </div>
+      <div>
+        <h2 class="text-xl font-black text-white">Tactical Match Pressure Situation Simulator</h2>
+        <p class="text-xs text-slate-400">Pre-defined iconic match situations and recommended player response profiles for Rajasthan Royals.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
@@ -143,11 +161,9 @@ html_content = f"""<!DOCTYPE html>
 
     <!-- PLAYER DOSSIERS -->
     <div class="space-y-4">
-      <div class="flex items-center justify-between flex-wrap gap-4">
-        <div>
-          <h2 class="text-xl font-black text-white">🃏 Top Player Pressure Dossiers (Auction Targets & Retained Rivals)</h2>
-          <p class="text-xs text-slate-400">Complete performance metrics, franchise contract labels, and Rajasthan Royals tactical fit.</p>
-        </div>
+      <div>
+        <h2 class="text-xl font-black text-white">Top Player Pressure Dossiers (Auction Targets & Retained Rivals)</h2>
+        <p class="text-xs text-slate-400">Complete performance metrics, franchise contract labels, and Rajasthan Royals tactical fit.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -161,14 +177,14 @@ html_content = f"""<!DOCTYPE html>
                   <span class="text-[10px] font-black px-2 py-0.5 rounded bg-white/10 text-slate-300">{"RR TARGET #" + str(b["rr_auction_rank"]) if b["is_auction_available"] else "OVERALL #" + str(b["rank"])}</span>
                   <span class="text-xs font-black text-amber-400">{b["clutch_score"]}/100 Clutch</span>
                 </div>
-                <h3 class="font-extrabold text-base text-white mt-1 truncate">{b["name"]} {b["flag"]}</h3>
+                <h3 class="font-extrabold text-base text-white mt-1 truncate">{b["name"]} <span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-300 font-bold border border-white/10">{b.get("country_code", "INTL")}</span></h3>
                 <div class="text-[11px] text-[#38BDF8] font-semibold truncate">{b["plain_english_role"]} • {b["capped_status"]}</div>
               </div>
             </div>
 
             <div class="mt-3 flex items-center justify-between flex-wrap gap-2 text-xs">
               <span class="px-2.5 py-0.5 rounded-full font-bold {"bg-emerald-500/20 text-emerald-400 border border-emerald-500/40" if b["is_auction_available"] else "bg-rose-500/20 text-rose-400 border border-rose-500/40"}">
-                {"🎯 Prime RR Target" if b["is_auction_available"] else b["franchise_label"]}
+                {"Prime RR Target" if b["is_auction_available"] else b["franchise_label"]}
               </span>
               <span class="font-bold text-amber-400 text-[11px]">{b["price_bracket"]}</span>
             </div>

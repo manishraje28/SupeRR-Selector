@@ -211,12 +211,12 @@ def resolve_player_image(name):
     # High-quality fallback avatar
     return f"https://api.dicebear.com/7.x/identicon/svg?seed={clean_name}"
 
-# 6. Flag mapping
-FLAG_MAP = {
-    "India": "🇮🇳", "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "South Africa": "🇿🇦", "Australia": "🇦🇺",
-    "West Indies": "🌴", "New Zealand": "🇳🇿", "Pakistan": "🇵🇰", "Sri Lanka": "🇱🇰",
-    "Afghanistan": "🇦🇫", "Zimbabwe": "🇿🇼", "Ireland": "🇮🇪", "Netherlands": "🇳🇱",
-    "International": "🌐"
+# 6. Country Code Mapping (Strictly clean professional ISO codes, ZERO emojis)
+COUNTRY_CODE_MAP = {
+    "India": "IND", "England": "ENG", "South Africa": "RSA", "Australia": "AUS",
+    "West Indies": "WI", "New Zealand": "NZ", "Pakistan": "PAK", "Sri Lanka": "SL",
+    "Afghanistan": "AFG", "Zimbabwe": "ZIM", "Ireland": "IRE", "Netherlands": "NED",
+    "International": "INTL"
 }
 
 # 7. Process Batters
@@ -238,7 +238,7 @@ for idx, row in df_bat.iterrows():
     batting_type = str(row.get('batting_type', 'RHB'))
     
     capped_status, country = classify_player_status(name, pid)
-    flag = FLAG_MAP.get(country, "🌐")
+    country_code = COUNTRY_CODE_MAP.get(country, "INTL")
     image_url = resolve_player_image(name)
     
     # Contract & Franchise Status Model
@@ -315,7 +315,8 @@ for idx, row in df_bat.iterrows():
         "name": name,
         "batting_type": tier_info["role"],
         "country": country,
-        "flag": flag,
+        "country_code": country_code,
+        "flag": country_code,
         "capped_status": capped_status,
         "image_url": image_url,
         "hp_balls": balls,
@@ -365,7 +366,7 @@ for idx, row in df_bowl.iterrows():
     bowling_type = str(row.get('bowling_type', 'RMF'))
     
     capped_status, country = classify_player_status(name, pid)
-    flag = FLAG_MAP.get(country, "🌐")
+    country_code = COUNTRY_CODE_MAP.get(country, "INTL")
     image_url = resolve_player_image(name)
     
     # Contract & Franchise Status Model
@@ -439,7 +440,8 @@ for idx, row in df_bowl.iterrows():
         "name": name,
         "bowling_type": tier_info["role"],
         "country": country,
-        "flag": flag,
+        "country_code": country_code,
+        "flag": country_code,
         "capped_status": capped_status,
         "image_url": image_url,
         "hp_balls": balls,
