@@ -16,14 +16,16 @@ import { motion, AnimatePresence } from "motion/react";
 export default function SuperRRDashboard() {
   const [activeTab, setActiveTab] = useState<"warroom" | "mlengine" | "simulator" | "dropdowns" | "cards" | "compare" | "methodology">("warroom");
   const [category, setCategory] = useState<"batters" | "bowlers">("batters");
-  const [availabilityFilter, setAvailabilityFilter] = useState("all");
+  const [availabilityFilter, setAvailabilityFilter] = useState("available");
   const [cappedFilter, setCappedFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [copiedText, setCopiedText] = useState<string | null>(null);
 
-  // ML Matchup Predictive Suite State
-  const [mlStrikerName, setMlStrikerName] = useState(data.batters[0]?.name || "Jos Buttler");
-  const [mlBowlerName, setMlBowlerName] = useState(data.bowlers[0]?.name || "Josh Hazlewood");
+  // ML Matchup Predictive Suite State (Default to Top RR Auction Targets)
+  const defaultStriker = useMemo(() => data.batters.find(b => b.is_auction_available)?.name || "Jos Buttler", []);
+  const defaultBowler = useMemo(() => data.bowlers.find(bw => bw.is_auction_available)?.name || "Krunal Pandya", []);
+  const [mlStrikerName, setMlStrikerName] = useState(defaultStriker);
+  const [mlBowlerName, setMlBowlerName] = useState(defaultBowler);
   const [mlBallsLeft, setMlBallsLeft] = useState(12);
   const [mlRequiredRR, setMlRequiredRR] = useState(11.5);
   const [mlWicketsLeft, setMlWicketsLeft] = useState(5);
@@ -99,12 +101,13 @@ export default function SuperRRDashboard() {
     }).slice(0, 4);
   }, [simMode, simPhase]);
 
-  // Head-to-Head Compare State
-  const [comparePlayer1, setComparePlayer1] = useState(data.batters[0].name);
-  const [comparePlayer2, setComparePlayer2] = useState(data.batters[1].name);
+  // Head-to-Head Compare State (Default to Top RR Auction Targets)
+  const targetBatters = useMemo(() => data.batters.filter(b => b.is_auction_available), []);
+  const [comparePlayer1, setComparePlayer1] = useState(targetBatters[0]?.name || "Jos Buttler");
+  const [comparePlayer2, setComparePlayer2] = useState(targetBatters[1]?.name || "Reeza Hendricks");
 
-  const p1 = (category === "batters" ? data.batters : data.bowlers).find(p => p.name === comparePlayer1) || data.batters[0];
-  const p2 = (category === "batters" ? data.batters : data.bowlers).find(p => p.name === comparePlayer2) || data.batters[1];
+  const p1 = (category === "batters" ? data.batters : data.bowlers).find(p => p.name === comparePlayer1) || targetBatters[0] || data.batters[0];
+  const p2 = (category === "batters" ? data.batters : data.bowlers).find(p => p.name === comparePlayer2) || targetBatters[1] || data.batters[1];
 
   // ML Next-Ball Outcome & Matchup Calculation (Calibrated Gradient Boosting Classifier)
   const mlPredictions = useMemo(() => {
@@ -330,8 +333,8 @@ export default function SuperRRDashboard() {
                   onChange={(val) => setAvailabilityFilter(val)}
                   icon={<SlidersHorizontal className="w-3.5 h-3.5" />}
                   options={[
+                    { value: "available", label: "RR Auction Targets Only (Default)" },
                     { value: "all", label: "All Availability Tiers" },
-                    { value: "available", label: "RR Auction Targets Only" },
                     { value: "retained", label: "Rival Retained Stars" },
                     { value: "rr_core", label: "Rajasthan Royals Core" },
                     { value: "restricted", label: "BCCI Policy Ineligible" }
@@ -542,17 +545,26 @@ export default function SuperRRDashboard() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[11px] font-bold text-slate-400 uppercase">Select Batter from Data Pack</label>
+                  <label className="text-[11px] font-bold text-slate-400 uppercase">Select Batter from Data Pack (RR Targets First)</label>
                   <select
                     value={mlStrikerName}
                     onChange={(e) => setMlStrikerName(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/15 text-white font-bold text-xs focus:outline-none focus:border-[#EA1A85]"
                   >
-                    {data.batters.map((b) => (
-                      <option key={b.name} value={b.name}>
-                        {b.name} ({b.country_code}) — {b.plain_english_role} {b.is_auction_available ? "[RR Auction Target]" : "[Retained]"}
-                      </option>
-                    ))}
+                    <optgroup label="RR Auction Targets (Available to Buy)">
+                      {data.batters.filter(b => b.is_auction_available).map((b) => (
+                        <option key={b.name} value={b.name}>
+                          {b.name} ({b.country_code}) — {b.plain_english_role} [Target #{b.rr_auction_rank}]
+                        </option>
+                      ))}
+                    </optgroup>
+                    <optgroup label="Rival Franchise Retentions (Do Not Bid)">
+                      {data.batters.filter(b => !b.is_auction_available).map((b) => (
+                        <option key={b.name} value={b.name}>
+                          {b.name} ({b.country_code}) — {b.plain_english_role} [Retained]
+                        </option>
+                      ))}
+                    </optgroup>
                   </select>
                 </div>
 
@@ -609,17 +621,26 @@ export default function SuperRRDashboard() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[11px] font-bold text-slate-400 uppercase">Select Bowler from Data Pack</label>
+                  <label className="text-[11px] font-bold text-slate-400 uppercase">Select Bowler from Data Pack (RR Targets First)</label>
                   <select
                     value={mlBowlerName}
                     onChange={(e) => setMlBowlerName(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/15 text-white font-bold text-xs focus:outline-none focus:border-[#254AA5]"
                   >
-                    {data.bowlers.map((bw) => (
-                      <option key={bw.name} value={bw.name}>
-                        {bw.name} ({bw.country_code}) — {bw.plain_english_role} {bw.is_auction_available ? "[RR Auction Target]" : "[Retained]"}
-                      </option>
-                    ))}
+                    <optgroup label="RR Auction Targets (Available to Buy)">
+                      {data.bowlers.filter(bw => bw.is_auction_available).map((bw) => (
+                        <option key={bw.name} value={bw.name}>
+                          {bw.name} ({bw.country_code}) — {bw.plain_english_role} [Target #{bw.rr_auction_rank}]
+                        </option>
+                      ))}
+                    </optgroup>
+                    <optgroup label="Rival Franchise Retentions (Do Not Bid)">
+                      {data.bowlers.filter(bw => !bw.is_auction_available).map((bw) => (
+                        <option key={bw.name} value={bw.name}>
+                          {bw.name} ({bw.country_code}) — {bw.plain_english_role} [Retained]
+                        </option>
+                      ))}
+                    </optgroup>
                   </select>
                 </div>
 
@@ -1298,26 +1319,30 @@ export default function SuperRRDashboard() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="text-xs font-bold text-[#EA1A85] uppercase block mb-1.5">Player 1 (Left)</label>
+                  <label className="text-xs font-bold text-[#EA1A85] uppercase block mb-1.5">Player 1 (Left - RR Targets First)</label>
                   <CustomFilterDropdown
                     value={comparePlayer1}
                     onChange={(val) => setComparePlayer1(val)}
-                    options={(category === "batters" ? data.batters : data.bowlers).map(p => ({
-                      value: p.name,
-                      label: `${p.name} (#${p.rank})`
-                    }))}
+                    options={[...(category === "batters" ? data.batters : data.bowlers)]
+                      .sort((a, b) => (b.is_auction_available ? 1 : 0) - (a.is_auction_available ? 1 : 0))
+                      .map(p => ({
+                        value: p.name,
+                        label: `${p.name} ${p.is_auction_available ? `[RR Target #${p.rr_auction_rank}]` : `[Retained]`}`
+                      }))}
                   />
                 </div>
 
                 <div>
-                  <label className="text-xs font-bold text-[#38BDF8] uppercase block mb-1.5">Player 2 (Right)</label>
+                  <label className="text-xs font-bold text-[#38BDF8] uppercase block mb-1.5">Player 2 (Right - RR Targets First)</label>
                   <CustomFilterDropdown
                     value={comparePlayer2}
                     onChange={(val) => setComparePlayer2(val)}
-                    options={(category === "batters" ? data.batters : data.bowlers).map(p => ({
-                      value: p.name,
-                      label: `${p.name} (#${p.rank})`
-                    }))}
+                    options={[...(category === "batters" ? data.batters : data.bowlers)]
+                      .sort((a, b) => (b.is_auction_available ? 1 : 0) - (a.is_auction_available ? 1 : 0))
+                      .map(p => ({
+                        value: p.name,
+                        label: `${p.name} ${p.is_auction_available ? `[RR Target #${p.rr_auction_rank}]` : `[Retained]`}`
+                      }))}
                   />
                 </div>
               </div>
