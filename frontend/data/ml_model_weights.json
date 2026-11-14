@@ -1,0 +1,1306 @@
+{
+  "model_name": "HistGradientBoosting Next-Ball Pressure Predictor & Auction Valuator",
+  "validation_metrics": {
+    "log_loss": 1.1727,
+    "accuracy": 0.4626,
+    "test_sample_size": 80751
+  },
+  "feature_names": [
+    "balls_left",
+    "rrr_clean",
+    "wickets_left",
+    "phase_code",
+    "is_chase",
+    "striker_cava",
+    "bowler_cava",
+    "striker_sr",
+    "bowler_econ"
+  ],
+  "classes": [
+    "Dot Ball",
+    "Strike Rotation (1-3)",
+    "Boundary (4-6)",
+    "Wicket"
+  ],
+  "class_base_priors": [
+    0.412,
+    0.405,
+    0.148,
+    0.035
+  ],
+  "feature_weights_importance": {
+    "rrr_clean": 0.28,
+    "wickets_left": 0.22,
+    "striker_cava": 0.18,
+    "bowler_cava": 0.15,
+    "phase_code": 0.09,
+    "striker_sr": 0.05,
+    "bowler_econ": 0.03
+  },
+  "player_valuations": {
+    "Aaron Hardie": {
+      "pred_price": 1.84,
+      "value_index": 2.7
+    },
+    "Abbas Afridi": {
+      "pred_price": 2.57,
+      "value_index": 3.0
+    },
+    "Abdul Samad": {
+      "pred_price": 4.53,
+      "value_index": 2.1
+    },
+    "Abhinav Manohar": {
+      "pred_price": 1.18,
+      "value_index": 4.7
+    },
+    "Abhishek Sharma": {
+      "pred_price": 14.66,
+      "value_index": 1.2
+    },
+    "Abishek Porel": {
+      "pred_price": 1.39,
+      "value_index": 3.6
+    },
+    "Abrar Ahmed": {
+      "pred_price": 12.04,
+      "value_index": 1.3
+    },
+    "Adam Milne": {
+      "pred_price": 2.6,
+      "value_index": 1.9
+    },
+    "Adam Zampa": {
+      "pred_price": 3.84,
+      "value_index": 3.0
+    },
+    "Adil Rashid": {
+      "pred_price": 1.57,
+      "value_index": 5.2
+    },
+    "Afif Hossain": {
+      "pred_price": 4.55,
+      "value_index": 2.1
+    },
+    "Aiden Markram": {
+      "pred_price": 4.29,
+      "value_index": 1.2
+    },
+    "Ajinkya Rahane": {
+      "pred_price": 2.55,
+      "value_index": 2.9
+    },
+    "Akeal Hosein": {
+      "pred_price": 12.18,
+      "value_index": 2.9
+    },
+    "Allah Ghazanfar": {
+      "pred_price": 1.67,
+      "value_index": 3.8
+    },
+    "Alzarri Joseph": {
+      "pred_price": 1.96,
+      "value_index": 4.1
+    },
+    "Ambati Rayudu": {
+      "pred_price": 7.11,
+      "value_index": 1.8
+    },
+    "Andre Russell": {
+      "pred_price": 14.62,
+      "value_index": 1.4
+    },
+    "Andrew Balbirnie": {
+      "pred_price": 1.73,
+      "value_index": 3.0
+    },
+    "Aniket Verma": {
+      "pred_price": 2.69,
+      "value_index": 2.5
+    },
+    "Anrich Nortje": {
+      "pred_price": 2.33,
+      "value_index": 2.4
+    },
+    "Anshul Kamboj": {
+      "pred_price": 1.6,
+      "value_index": 3.4
+    },
+    "Anuj Rawat": {
+      "pred_price": 5.23,
+      "value_index": 2.3
+    },
+    "Arshad Khan": {
+      "pred_price": 2.22,
+      "value_index": 2.3
+    },
+    "Arshdeep Singh": {
+      "pred_price": 2.77,
+      "value_index": 4.2
+    },
+    "Ashutosh Sharma": {
+      "pred_price": 9.9,
+      "value_index": 1.4
+    },
+    "Asif Khan": {
+      "pred_price": 1.51,
+      "value_index": 4.6
+    },
+    "Avesh Khan": {
+      "pred_price": 1.68,
+      "value_index": 3.1
+    },
+    "Axar Patel": {
+      "pred_price": 11.91,
+      "value_index": 1.0
+    },
+    "Ayush Badoni": {
+      "pred_price": 7.21,
+      "value_index": 0.7
+    },
+    "Azmatullah Omarzai": {
+      "pred_price": 2.71,
+      "value_index": 3.2
+    },
+    "Babar Azam": {
+      "pred_price": 1.31,
+      "value_index": 3.9
+    },
+    "Barry McCarthy": {
+      "pred_price": 1.92,
+      "value_index": 2.6
+    },
+    "Benjamin Lister": {
+      "pred_price": 6.87,
+      "value_index": 1.9
+    },
+    "Benjamin Sears": {
+      "pred_price": 6.02,
+      "value_index": 1.7
+    },
+    "Benjamin White": {
+      "pred_price": 1.85,
+      "value_index": 2.7
+    },
+    "Bhanuka Rajapaksa": {
+      "pred_price": 5.69,
+      "value_index": 2.0
+    },
+    "Bhuvneshwar Kumar": {
+      "pred_price": 11.12,
+      "value_index": 1.2
+    },
+    "Blair Tickner": {
+      "pred_price": 3.35,
+      "value_index": 1.5
+    },
+    "Blessing Muzarabani": {
+      "pred_price": 2.55,
+      "value_index": 2.0
+    },
+    "Brad Evans": {
+      "pred_price": 1.71,
+      "value_index": 2.9
+    },
+    "Brandon King": {
+      "pred_price": 1.12,
+      "value_index": 4.5
+    },
+    "Brian Bennett": {
+      "pred_price": 1.12,
+      "value_index": 4.5
+    },
+    "Brijesh Sharma": {
+      "pred_price": 1.5,
+      "value_index": 3.6
+    },
+    "Cameron Green": {
+      "pred_price": 5.83,
+      "value_index": 4.8
+    },
+    "Chamika Karunaratne": {
+      "pred_price": 2.65,
+      "value_index": 3.5
+    },
+    "Charith Asalanka": {
+      "pred_price": 2.08,
+      "value_index": 2.4
+    },
+    "Chris Jordan": {
+      "pred_price": 1.24,
+      "value_index": 5.0
+    },
+    "Clive Madande": {
+      "pred_price": 2.25,
+      "value_index": 2.4
+    },
+    "Cooper Connolly": {
+      "pred_price": 1.62,
+      "value_index": 3.1
+    },
+    "Corbin Bosch": {
+      "pred_price": 1.98,
+      "value_index": 5.3
+    },
+    "Craig Young": {
+      "pred_price": 0.7,
+      "value_index": 5.0
+    },
+    "Curtis Campher": {
+      "pred_price": 1.76,
+      "value_index": 3.1
+    },
+    "Daniel Sams": {
+      "pred_price": 1.58,
+      "value_index": 3.2
+    },
+    "Darwish Rasooli": {
+      "pred_price": 1.7,
+      "value_index": 2.9
+    },
+    "Daryl Mitchell": {
+      "pred_price": 7.33,
+      "value_index": 1.5
+    },
+    "Dasun Shanaka": {
+      "pred_price": 5.52,
+      "value_index": 2.3
+    },
+    "David Miller": {
+      "pred_price": 6.28,
+      "value_index": 1.6
+    },
+    "David Warner": {
+      "pred_price": 3.41,
+      "value_index": 2.4
+    },
+    "Dawid Malan": {
+      "pred_price": 1.71,
+      "value_index": 4.3
+    },
+    "Deepak Chahar": {
+      "pred_price": 1.24,
+      "value_index": 4.0
+    },
+    "Deepak Hooda": {
+      "pred_price": 2.19,
+      "value_index": 2.3
+    },
+    "Devdutt Padikkal": {
+      "pred_price": 1.94,
+      "value_index": 3.2
+    },
+    "Devon Conway": {
+      "pred_price": 1.9,
+      "value_index": 2.6
+    },
+    "Dewald Brevis": {
+      "pred_price": 3.59,
+      "value_index": 1.4
+    },
+    "Dhruv Jurel": {
+      "pred_price": 9.81,
+      "value_index": 1.4
+    },
+    "Digvesh Rathi": {
+      "pred_price": 2.14,
+      "value_index": 2.3
+    },
+    "Dilshan Madushanka": {
+      "pred_price": 1.75,
+      "value_index": 2.9
+    },
+    "Dinesh Karthik": {
+      "pred_price": 9.46,
+      "value_index": 1.6
+    },
+    "Donovan Ferreira": {
+      "pred_price": 10.58,
+      "value_index": 0.9
+    },
+    "Dunith Wellalage": {
+      "pred_price": 1.5,
+      "value_index": 3.4
+    },
+    "Dushmantha Chameera": {
+      "pred_price": 1.91,
+      "value_index": 2.9
+    },
+    "Dwaine Pretorius": {
+      "pred_price": 2.37,
+      "value_index": 2.1
+    },
+    "Ehsan Khan": {
+      "pred_price": 1.82,
+      "value_index": 3.2
+    },
+    "Eshan Malinga": {
+      "pred_price": 1.21,
+      "value_index": 4.7
+    },
+    "Faf du Plessis": {
+      "pred_price": 1.36,
+      "value_index": 3.7
+    },
+    "Faheem Ashraf": {
+      "pred_price": 5.76,
+      "value_index": 3.3
+    },
+    "Fakhar Zaman": {
+      "pred_price": 6.82,
+      "value_index": 1.9
+    },
+    "Fareed Malik": {
+      "pred_price": 4.38,
+      "value_index": 1.1
+    },
+    "FazalHaq Farooqi": {
+      "pred_price": 0.75,
+      "value_index": 5.6
+    },
+    "Gareth Delany": {
+      "pred_price": 9.42,
+      "value_index": 2.9
+    },
+    "George Dockrell": {
+      "pred_price": 9.69,
+      "value_index": 1.7
+    },
+    "George Linde": {
+      "pred_price": 1.12,
+      "value_index": 4.5
+    },
+    "Gerald Coetzee": {
+      "pred_price": 7.9,
+      "value_index": 1.4
+    },
+    "Glenn Maxwell": {
+      "pred_price": 2.98,
+      "value_index": 5.0
+    },
+    "Glenn Phillips": {
+      "pred_price": 4.56,
+      "value_index": 2.1
+    },
+    "Gudakesh Motie": {
+      "pred_price": 11.56,
+      "value_index": 4.3
+    },
+    "Gulbadin Naib": {
+      "pred_price": 6.36,
+      "value_index": 2.7
+    },
+    "Hardik Pandya": {
+      "pred_price": 3.44,
+      "value_index": 2.3
+    },
+    "Haris Rauf": {
+      "pred_price": 6.25,
+      "value_index": 1.7
+    },
+    "Harpreet Brar": {
+      "pred_price": 8.13,
+      "value_index": 4.0
+    },
+    "Harry Brook": {
+      "pred_price": 4.5,
+      "value_index": 1.7
+    },
+    "Harry Tector": {
+      "pred_price": 1.79,
+      "value_index": 3.9
+    },
+    "Harshal Patel": {
+      "pred_price": 1.75,
+      "value_index": 5.0
+    },
+    "Harshit Rana": {
+      "pred_price": 1.57,
+      "value_index": 4.8
+    },
+    "Hasan Mahmud": {
+      "pred_price": 4.15,
+      "value_index": 1.9
+    },
+    "Heinrich Klaasen": {
+      "pred_price": 16.32,
+      "value_index": 1.3
+    },
+    "Ibrahim Zadran": {
+      "pred_price": 1.54,
+      "value_index": 3.2
+    },
+    "Iftikhar Ahmed": {
+      "pred_price": 1.43,
+      "value_index": 3.5
+    },
+    "Ish Sodhi": {
+      "pred_price": 1.26,
+      "value_index": 4.9
+    },
+    "Ishan Kishan": {
+      "pred_price": 11.95,
+      "value_index": 1.3
+    },
+    "Ishant Sharma": {
+      "pred_price": 2.61,
+      "value_index": 1.9
+    },
+    "Jacob Bethell": {
+      "pred_price": 2.08,
+      "value_index": 3.9
+    },
+    "Jacob Duffy": {
+      "pred_price": 1.31,
+      "value_index": 3.8
+    },
+    "Jaker Ali Anik": {
+      "pred_price": 8.36,
+      "value_index": 2.0
+    },
+    "Jamie Overton": {
+      "pred_price": 12.71,
+      "value_index": 4.0
+    },
+    "Jason Behrendorff": {
+      "pred_price": 3.5,
+      "value_index": 1.4
+    },
+    "Jason Holder": {
+      "pred_price": 2.83,
+      "value_index": 4.6
+    },
+    "Jasprit Bumrah": {
+      "pred_price": 15.2,
+      "value_index": 1.1
+    },
+    "Jaydev Unadkat": {
+      "pred_price": 2.24,
+      "value_index": 2.2
+    },
+    "Jimmy Neesham": {
+      "pred_price": 6.28,
+      "value_index": 2.1
+    },
+    "Jitesh Sharma": {
+      "pred_price": 5.94,
+      "value_index": 1.0
+    },
+    "Jofra Archer": {
+      "pred_price": 2.01,
+      "value_index": 4.2
+    },
+    "Johnson Charles": {
+      "pred_price": 1.18,
+      "value_index": 4.2
+    },
+    "Jonny Bairstow": {
+      "pred_price": 2.55,
+      "value_index": 2.0
+    },
+    "Jos Buttler": {
+      "pred_price": 15.72,
+      "value_index": 1.4
+    },
+    "Josh Hazlewood": {
+      "pred_price": 13.33,
+      "value_index": 1.1
+    },
+    "Josh Inglis": {
+      "pred_price": 6.05,
+      "value_index": 1.5
+    },
+    "Joshua Little": {
+      "pred_price": 1.21,
+      "value_index": 4.8
+    },
+    "Junaid Siddique": {
+      "pred_price": 1.59,
+      "value_index": 3.1
+    },
+    "Kagiso Rabada": {
+      "pred_price": 1.72,
+      "value_index": 6.3
+    },
+    "Kamindu Mendis": {
+      "pred_price": 2.13,
+      "value_index": 3.7
+    },
+    "Kane Richardson": {
+      "pred_price": 1.25,
+      "value_index": 5.0
+    },
+    "Kane Williamson": {
+      "pred_price": 2.25,
+      "value_index": 2.2
+    },
+    "Karim Janat": {
+      "pred_price": 1.78,
+      "value_index": 3.8
+    },
+    "Kartik Tyagi": {
+      "pred_price": 2.94,
+      "value_index": 1.7
+    },
+    "Keshav Maharaj": {
+      "pred_price": 1.87,
+      "value_index": 2.7
+    },
+    "Khaleel Ahmed": {
+      "pred_price": 1.55,
+      "value_index": 3.2
+    },
+    "Kieron Pollard": {
+      "pred_price": 1.58,
+      "value_index": 3.9
+    },
+    "Krunal Pandya": {
+      "pred_price": 11.03,
+      "value_index": 2.2
+    },
+    "Kuldeep Sen": {
+      "pred_price": 1.35,
+      "value_index": 3.7
+    },
+    "Kuldeep Yadav": {
+      "pred_price": 13.53,
+      "value_index": 1.5
+    },
+    "Kusal Mendis": {
+      "pred_price": 8.42,
+      "value_index": 1.9
+    },
+    "Kusal Perera": {
+      "pred_price": 1.6,
+      "value_index": 3.5
+    },
+    "Kyle Jamieson": {
+      "pred_price": 1.13,
+      "value_index": 4.4
+    },
+    "Kyle Mayers": {
+      "pred_price": 1.17,
+      "value_index": 4.3
+    },
+    "Liam Livingstone": {
+      "pred_price": 8.23,
+      "value_index": 3.0
+    },
+    "Liton Das": {
+      "pred_price": 6.5,
+      "value_index": 1.9
+    },
+    "Lockie Ferguson": {
+      "pred_price": 8.5,
+      "value_index": 1.6
+    },
+    "Lokesh Rahul": {
+      "pred_price": 5.3,
+      "value_index": 0.9
+    },
+    "Luke Jongwe": {
+      "pred_price": 1.89,
+      "value_index": 2.8
+    },
+    "Lungi Ngidi": {
+      "pred_price": 5.34,
+      "value_index": 2.0
+    },
+    "M Shahrukh Khan": {
+      "pred_price": 3.27,
+      "value_index": 2.1
+    },
+    "Mahedi Hasan": {
+      "pred_price": 3.5,
+      "value_index": 4.0
+    },
+    "Maheesh Theekshana": {
+      "pred_price": 2.64,
+      "value_index": 3.0
+    },
+    "Mahendra Singh Dhoni": {
+      "pred_price": 2.91,
+      "value_index": 2.6
+    },
+    "Mahipal Lomror": {
+      "pred_price": 3.17,
+      "value_index": 1.6
+    },
+    "Manish Pandey": {
+      "pred_price": 1.73,
+      "value_index": 2.9
+    },
+    "Marco Jansen": {
+      "pred_price": 2.72,
+      "value_index": 3.6
+    },
+    "Marcus Stoinis": {
+      "pred_price": 10.25,
+      "value_index": 2.2
+    },
+    "Mark Adair": {
+      "pred_price": 6.83,
+      "value_index": 3.4
+    },
+    "Mark Chapman": {
+      "pred_price": 2.59,
+      "value_index": 2.8
+    },
+    "Mark Wood": {
+      "pred_price": 1.13,
+      "value_index": 4.8
+    },
+    "Matheesha Pathirana": {
+      "pred_price": 14.23,
+      "value_index": 1.0
+    },
+    "Matt Henry": {
+      "pred_price": 1.69,
+      "value_index": 3.4
+    },
+    "Matthew Forde": {
+      "pred_price": 4.28,
+      "value_index": 1.2
+    },
+    "Matthew Humphreys": {
+      "pred_price": 2.58,
+      "value_index": 1.9
+    },
+    "Matthew Short": {
+      "pred_price": 12.28,
+      "value_index": 1.6
+    },
+    "Matthew Wade": {
+      "pred_price": 4.62,
+      "value_index": 2.6
+    },
+    "Mayank Markande": {
+      "pred_price": 2.07,
+      "value_index": 2.5
+    },
+    "Mayank Yadav": {
+      "pred_price": 4.28,
+      "value_index": 2.1
+    },
+    "Michael Bracewell": {
+      "pred_price": 2.11,
+      "value_index": 3.2
+    },
+    "Mitchell Marsh": {
+      "pred_price": 8.33,
+      "value_index": 1.7
+    },
+    "Mitchell Santner": {
+      "pred_price": 7.72,
+      "value_index": 3.4
+    },
+    "Mitchell Starc": {
+      "pred_price": 8.38,
+      "value_index": 0.6
+    },
+    "Moeen Ali": {
+      "pred_price": 5.18,
+      "value_index": 3.4
+    },
+    "Mohammad Haris": {
+      "pred_price": 8.9,
+      "value_index": 1.4
+    },
+    "Mohammad Nabi": {
+      "pred_price": 9.31,
+      "value_index": 2.5
+    },
+    "Mohammad Nawaz": {
+      "pred_price": 7.62,
+      "value_index": 2.0
+    },
+    "Mohammad Rishad Hossain": {
+      "pred_price": 2.02,
+      "value_index": 3.8
+    },
+    "Mohammad Rizwan": {
+      "pred_price": 2.02,
+      "value_index": 4.5
+    },
+    "Mohammad Saif Hassan": {
+      "pred_price": 1.81,
+      "value_index": 3.9
+    },
+    "Mohammad Saifuddin": {
+      "pred_price": 1.32,
+      "value_index": 4.1
+    },
+    "Mohammad Wasim": {
+      "pred_price": 11.58,
+      "value_index": 1.4
+    },
+    "Mohammed Shami": {
+      "pred_price": 3.23,
+      "value_index": 1.5
+    },
+    "Mohammed Siraj": {
+      "pred_price": 2.2,
+      "value_index": 2.3
+    },
+    "Mohit Sharma": {
+      "pred_price": 2.4,
+      "value_index": 2.6
+    },
+    "Mohsin Khan": {
+      "pred_price": 1.35,
+      "value_index": 4.4
+    },
+    "Muhammad Waseem": {
+      "pred_price": 6.66,
+      "value_index": 1.8
+    },
+    "Muhammad Zohaib": {
+      "pred_price": 1.58,
+      "value_index": 3.2
+    },
+    "Mujeeb Ur Rahman": {
+      "pred_price": 7.99,
+      "value_index": 1.5
+    },
+    "Mukesh Kumar": {
+      "pred_price": 2.66,
+      "value_index": 1.9
+    },
+    "Mustafizur Rahman": {
+      "pred_price": 6.34,
+      "value_index": 1.6
+    },
+    "Najibullah Zadran": {
+      "pred_price": 9.0,
+      "value_index": 1.4
+    },
+    "Naman Dhir": {
+      "pred_price": 7.25,
+      "value_index": 1.2
+    },
+    "Namboori Tilak Varma": {
+      "pred_price": 11.95,
+      "value_index": 1.5
+    },
+    "Nandre Burger": {
+      "pred_price": 4.51,
+      "value_index": 2.8
+    },
+    "Naseem Shah": {
+      "pred_price": 1.7,
+      "value_index": 4.7
+    },
+    "Nasum Ahmed": {
+      "pred_price": 2.73,
+      "value_index": 1.8
+    },
+    "Nathan Ellis": {
+      "pred_price": 7.51,
+      "value_index": 1.5
+    },
+    "Naveen ul Haq": {
+      "pred_price": 1.69,
+      "value_index": 3.0
+    },
+    "Nehal Wadhera": {
+      "pred_price": 1.56,
+      "value_index": 3.2
+    },
+    "Nicholas Pooran": {
+      "pred_price": 16.67,
+      "value_index": 0.8
+    },
+    "Nitish Rana": {
+      "pred_price": 1.5,
+      "value_index": 3.3
+    },
+    "Nitish Reddy": {
+      "pred_price": 2.9,
+      "value_index": 3.7
+    },
+    "Noor Ahmad": {
+      "pred_price": 6.43,
+      "value_index": 1.8
+    },
+    "Nurul Hasan": {
+      "pred_price": 5.6,
+      "value_index": 2.2
+    },
+    "Nuwan Thushara": {
+      "pred_price": 1.47,
+      "value_index": 3.4
+    },
+    "Obed McCoy": {
+      "pred_price": 1.4,
+      "value_index": 3.6
+    },
+    "Odean Smith": {
+      "pred_price": 3.89,
+      "value_index": 5.6
+    },
+    "Ottneil Baartman": {
+      "pred_price": 3.65,
+      "value_index": 1.7
+    },
+    "Parvez Emon": {
+      "pred_price": 1.45,
+      "value_index": 3.4
+    },
+    "Pathum Nissanka": {
+      "pred_price": 11.36,
+      "value_index": 1.4
+    },
+    "Patrick Cummins": {
+      "pred_price": 9.09,
+      "value_index": 2.3
+    },
+    "Paul Stirling": {
+      "pred_price": 1.83,
+      "value_index": 2.7
+    },
+    "Phil Salt": {
+      "pred_price": 13.61,
+      "value_index": 1.7
+    },
+    "Prabhsimran Singh": {
+      "pred_price": 13.25,
+      "value_index": 1.3
+    },
+    "Prasidh Krishna": {
+      "pred_price": -0.01,
+      "value_index": 5.0
+    },
+    "Prince Yadav": {
+      "pred_price": 1.92,
+      "value_index": 2.6
+    },
+    "Priyansh Arya": {
+      "pred_price": 7.23,
+      "value_index": 1.1
+    },
+    "Quinton de Kock": {
+      "pred_price": 2.2,
+      "value_index": 3.1
+    },
+    "Rachin Ravindra": {
+      "pred_price": 7.61,
+      "value_index": 1.7
+    },
+    "Rahmanullah Gurbaz": {
+      "pred_price": 2.4,
+      "value_index": 2.1
+    },
+    "Rahul Chahar": {
+      "pred_price": 1.3,
+      "value_index": 3.8
+    },
+    "Rahul Chopra": {
+      "pred_price": 3.05,
+      "value_index": 1.6
+    },
+    "Rahul Tewatia": {
+      "pred_price": 4.18,
+      "value_index": 1.7
+    },
+    "Rahul Tripathi": {
+      "pred_price": 1.82,
+      "value_index": 3.6
+    },
+    "Rajat Patidar": {
+      "pred_price": 2.65,
+      "value_index": 2.2
+    },
+    "Ramandeep Singh": {
+      "pred_price": 1.37,
+      "value_index": 3.6
+    },
+    "Rashid Khan": {
+      "pred_price": 15.31,
+      "value_index": 0.9
+    },
+    "Rasikh Salam": {
+      "pred_price": 5.87,
+      "value_index": 2.0
+    },
+    "Rassie van der Dussen": {
+      "pred_price": 2.66,
+      "value_index": 2.2
+    },
+    "Ravi Bishnoi": {
+      "pred_price": 3.61,
+      "value_index": 1.4
+    },
+    "Ravichandran Ashwin": {
+      "pred_price": 1.92,
+      "value_index": 6.5
+    },
+    "Ravindra Jadeja": {
+      "pred_price": 3.61,
+      "value_index": 3.1
+    },
+    "Reece Topley": {
+      "pred_price": 1.71,
+      "value_index": 3.7
+    },
+    "Reeza Hendricks": {
+      "pred_price": 14.23,
+      "value_index": 1.9
+    },
+    "Richard Ngarava": {
+      "pred_price": 3.7,
+      "value_index": 2.4
+    },
+    "Rilee Rossouw": {
+      "pred_price": 1.5,
+      "value_index": 3.6
+    },
+    "Riley Meredith": {
+      "pred_price": 3.7,
+      "value_index": 2.5
+    },
+    "Rinku Singh": {
+      "pred_price": 15.63,
+      "value_index": 1.1
+    },
+    "Ripon Mondol": {
+      "pred_price": 6.17,
+      "value_index": 1.3
+    },
+    "Rishabh Pant": {
+      "pred_price": 12.63,
+      "value_index": 0.4
+    },
+    "Riyan Parag": {
+      "pred_price": 10.34,
+      "value_index": 0.5
+    },
+    "Rohit Sharma": {
+      "pred_price": 12.03,
+      "value_index": 1.6
+    },
+    "Romario Shepherd": {
+      "pred_price": 4.51,
+      "value_index": 2.0
+    },
+    "Roston Chase": {
+      "pred_price": 2.06,
+      "value_index": 2.7
+    },
+    "Rovman Powell": {
+      "pred_price": 11.81,
+      "value_index": 1.1
+    },
+    "Ruturaj Gaikwad": {
+      "pred_price": 1.8,
+      "value_index": 3.5
+    },
+    "Ryan Burl": {
+      "pred_price": 4.9,
+      "value_index": 2.1
+    },
+    "Ryan Rickelton": {
+      "pred_price": 14.23,
+      "value_index": 1.6
+    },
+    "Sahibzada Farhan": {
+      "pred_price": 1.79,
+      "value_index": 2.8
+    },
+    "Sai Kishore": {
+      "pred_price": 4.37,
+      "value_index": 2.3
+    },
+    "Sai Sudharsan": {
+      "pred_price": 7.79,
+      "value_index": 1.5
+    },
+    "Saim Ayub": {
+      "pred_price": 4.14,
+      "value_index": 2.1
+    },
+    "Salman Agha": {
+      "pred_price": 1.73,
+      "value_index": 3.4
+    },
+    "Salman Mirza": {
+      "pred_price": 3.42,
+      "value_index": 1.8
+    },
+    "Sam Billings": {
+      "pred_price": 1.39,
+      "value_index": 4.7
+    },
+    "Sam Curran": {
+      "pred_price": 2.66,
+      "value_index": 5.2
+    },
+    "Sameer Rizvi": {
+      "pred_price": 13.4,
+      "value_index": 1.4
+    },
+    "Sandeep Sharma": {
+      "pred_price": 4.11,
+      "value_index": 1.2
+    },
+    "Sanju Samson": {
+      "pred_price": 10.58,
+      "value_index": 0.5
+    },
+    "Sean Abbott": {
+      "pred_price": 3.35,
+      "value_index": 2.4
+    },
+    "Sediqullah Atal": {
+      "pred_price": 6.78,
+      "value_index": 1.8
+    },
+    "Shadab Khan": {
+      "pred_price": 1.99,
+      "value_index": 5.0
+    },
+    "Shahbaz Ahmed": {
+      "pred_price": 2.68,
+      "value_index": 1.9
+    },
+    "Shaheen Afridi": {
+      "pred_price": 12.06,
+      "value_index": 3.6
+    },
+    "Shai Hope": {
+      "pred_price": 1.27,
+      "value_index": 4.3
+    },
+    "Shakib Al Hasan": {
+      "pred_price": 1.31,
+      "value_index": 3.8
+    },
+    "Shamar Joseph": {
+      "pred_price": 2.74,
+      "value_index": 1.8
+    },
+    "Shamim Hossain": {
+      "pred_price": 2.02,
+      "value_index": 3.6
+    },
+    "Sharafuddin Ashraf": {
+      "pred_price": 2.04,
+      "value_index": 2.9
+    },
+    "Shardul Thakur": {
+      "pred_price": 2.68,
+      "value_index": 2.9
+    },
+    "Shashank Singh": {
+      "pred_price": 8.67,
+      "value_index": 1.3
+    },
+    "Sheldon Cottrell": {
+      "pred_price": 1.81,
+      "value_index": 2.8
+    },
+    "Sherfane Rutherford": {
+      "pred_price": 4.01,
+      "value_index": 2.0
+    },
+    "Shikhar Dhawan": {
+      "pred_price": 8.71,
+      "value_index": 2.0
+    },
+    "Shimron Hetmyer": {
+      "pred_price": 9.11,
+      "value_index": 0.5
+    },
+    "Shivam Dube": {
+      "pred_price": 8.19,
+      "value_index": 0.9
+    },
+    "Shivam Mavi": {
+      "pred_price": 1.36,
+      "value_index": 4.9
+    },
+    "Shoriful Islam": {
+      "pred_price": 2.01,
+      "value_index": 2.6
+    },
+    "Shreyas Iyer": {
+      "pred_price": 18.0,
+      "value_index": 0.7
+    },
+    "Shubham Dubey": {
+      "pred_price": 8.0,
+      "value_index": 1.9
+    },
+    "Shubman Gill": {
+      "pred_price": 14.28,
+      "value_index": 1.3
+    },
+    "Sikandar Raza": {
+      "pred_price": 10.27,
+      "value_index": 2.0
+    },
+    "Spencer Johnson": {
+      "pred_price": 4.67,
+      "value_index": 2.1
+    },
+    "Sufiyan Muqeem": {
+      "pred_price": 13.3,
+      "value_index": 1.8
+    },
+    "Sunil Narine": {
+      "pred_price": 13.99,
+      "value_index": 1.6
+    },
+    "Suryakumar Yadav": {
+      "pred_price": 15.84,
+      "value_index": 1.6
+    },
+    "Suyash Sharma": {
+      "pred_price": 1.82,
+      "value_index": 2.7
+    },
+    "T Natarajan": {
+      "pred_price": 0.17,
+      "value_index": 5.7
+    },
+    "Tadiwanashe Marumani": {
+      "pred_price": 1.49,
+      "value_index": 4.1
+    },
+    "Tanzid Hasan": {
+      "pred_price": 1.37,
+      "value_index": 4.3
+    },
+    "Tanzim Sakib": {
+      "pred_price": 0.88,
+      "value_index": 5.0
+    },
+    "Tashinga Musekiwa": {
+      "pred_price": 1.94,
+      "value_index": 2.6
+    },
+    "Taskin Ahmed": {
+      "pred_price": 3.41,
+      "value_index": 2.4
+    },
+    "Tim David": {
+      "pred_price": 14.94,
+      "value_index": 1.1
+    },
+    "Tim Seifert": {
+      "pred_price": 4.6,
+      "value_index": 1.9
+    },
+    "Tim Southee": {
+      "pred_price": 9.27,
+      "value_index": 1.7
+    },
+    "Towhid Hridoy": {
+      "pred_price": 6.81,
+      "value_index": 2.2
+    },
+    "Travis Head": {
+      "pred_price": 9.26,
+      "value_index": 1.5
+    },
+    "Trent Boult": {
+      "pred_price": 1.51,
+      "value_index": 3.3
+    },
+    "Tristan Stubbs": {
+      "pred_price": 14.9,
+      "value_index": 1.4
+    },
+    "Tushar Deshpande": {
+      "pred_price": 2.74,
+      "value_index": 1.8
+    },
+    "Tymal Mills": {
+      "pred_price": 4.35,
+      "value_index": 1.3
+    },
+    "Umesh Yadav": {
+      "pred_price": 1.91,
+      "value_index": 3.5
+    },
+    "Umran Malik": {
+      "pred_price": 9.13,
+      "value_index": 1.5
+    },
+    "Usman Khan": {
+      "pred_price": 1.33,
+      "value_index": 3.8
+    },
+    "Vaibhav Arora": {
+      "pred_price": 1.25,
+      "value_index": 4.0
+    },
+    "Vaibhav Sooryavanshi": {
+      "pred_price": 13.45,
+      "value_index": 1.1
+    },
+    "Varun Chakravarthy": {
+      "pred_price": 3.26,
+      "value_index": 2.9
+    },
+    "Venkatesh Iyer": {
+      "pred_price": 8.74,
+      "value_index": 1.6
+    },
+    "Vijay Shankar": {
+      "pred_price": 1.54,
+      "value_index": 3.9
+    },
+    "Virat Kohli": {
+      "pred_price": 15.74,
+      "value_index": 1.2
+    },
+    "Vyshak Kumar": {
+      "pred_price": 1.22,
+      "value_index": 5.5
+    },
+    "Wanindu Hasaranga": {
+      "pred_price": 2.39,
+      "value_index": 6.4
+    },
+    "Washington Sundar": {
+      "pred_price": 4.85,
+      "value_index": 3.1
+    },
+    "Wellington Masakadza": {
+      "pred_price": 2.12,
+      "value_index": 4.5
+    },
+    "William Jacks": {
+      "pred_price": 1.47,
+      "value_index": 3.4
+    },
+    "Wriddhiman Saha": {
+      "pred_price": 1.98,
+      "value_index": 2.7
+    },
+    "Xavier Bartlett": {
+      "pred_price": 4.81,
+      "value_index": 2.5
+    },
+    "Yash Dayal": {
+      "pred_price": 2.37,
+      "value_index": 2.1
+    },
+    "Yash Thakur": {
+      "pred_price": 1.58,
+      "value_index": 3.4
+    },
+    "Yashasvi Jaiswal": {
+      "pred_price": 15.39,
+      "value_index": 1.2
+    },
+    "Yuzvendra Chahal": {
+      "pred_price": 2.14,
+      "value_index": 3.7
+    },
+    "Zakary Foulkes": {
+      "pred_price": 1.11,
+      "value_index": 6.4
+    }
+  }
+}

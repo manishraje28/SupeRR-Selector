@@ -10,19 +10,19 @@
     "total_deliveries": 200999,
     "unique_strikers": 200,
     "unique_bowlers": 179,
-    "high_pressure_batters_evaluated": 200,
-    "high_pressure_bowlers_evaluated": 179,
-    "auction_target_batters": 151,
-    "auction_target_bowlers": 143,
+    "high_pressure_batters_evaluated": 189,
+    "high_pressure_bowlers_evaluated": 168,
+    "auction_target_batters": 153,
+    "auction_target_bowlers": 144,
     "rival_retained_batters": 25,
-    "rival_retained_bowlers": 15,
-    "rr_core_players": 20,
-    "bcci_ineligible_players": 25
+    "rival_retained_bowlers": 14,
+    "rr_core_players": 21,
+    "bcci_ineligible_pakistan_players_excluded": 39
   },
   "model": {
-    "name": "Context-Adjusted Value Added (CAVA) with Match-Level Empirical Bayes Shrinkage",
+    "name": "Context-Adjusted Value Added (CAVA) with Match-Level Empirical Bayes Shrinkage & Gradient Boosting ML",
     "pressure_threshold_mpi": 0.55,
     "training_split": "2022-2024 (70th percentile frozen)",
-    "out_of_time_validation": "2025-2026 (RMSE 1.7569, Brier 0.0514)"
+    "out_of_time_validation": "2025-2026 (RMSE 1.7569, Brier 0.0514, ML Next-Ball Log Loss 1.1727)"
   }
 }

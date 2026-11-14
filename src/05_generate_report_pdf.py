@@ -126,11 +126,11 @@ def generate_pdf_report():
         "Round 1 challenges us to identify the most reliable players under pressure from the proprietary data pack. "
         "From an elite franchise war-room perspective, this requires addressing two distinct layers of analysis: "
         "(1) <b>The Pure Mathematical Benchmark</b> — establishing historical truth across 200,999 balls to identify "
-        "who performed best under extreme match pressure (MPI ≥ 0.55); and "
+        "who performed best under extreme match pressure (MPI ≥ 0.55), with Pakistani players excluded per BCCI IPL regulations; and "
         "(2) <b>The Rajasthan Royals IPL 2027 Auction Strategy</b> — filtering out rival franchise retentions "
-        "(e.g., Suryakumar Yadav, Jasprit Bumrah, and Ryan Rickelton at MI; Heinrich Klaasen at SRH; Sunil Narine at KKR) "
-        "and BCCI-ineligible stars to isolate the <b>100% targetable player pool</b> that RR can realistically buy at the auction "
-        "to complement retained stars <b>Sanju Samson, Yashasvi Jaiswal, Riyan Parag, Dhruv Jurel, Shimron Hetmyer</b>, and <b>Sandeep Sharma</b>."
+        "(e.g., Suryakumar Yadav, Jasprit Bumrah, and Ryan Rickelton at MI; Heinrich Klaasen at SRH; Sunil Narine at KKR; "
+        "Sanju Samson contracted with CSK in the IPL 2026 mapping) to isolate the <b>100% targetable player pool</b> that RR can realistically buy at the auction "
+        "to complement retained stars <b>Yashasvi Jaiswal, Riyan Parag, Dhruv Jurel, Shimron Hetmyer, Ravindra Jadeja</b>, and <b>Sandeep Sharma</b>."
     )
     story.append(Paragraph(exec_summary, body_style))
     story.append(Spacer(1, 3))
@@ -219,7 +219,7 @@ def generate_pdf_report():
     story.append(Spacer(1, 5))
 
     # Section 3: Pressure Methodology
-    story.append(Paragraph("3. Mathematical Methodology & Modeling Integrity", h1_style))
+    story.append(Paragraph("3. Mathematical Methodology, ML Predictive Suite & Modeling Integrity", h1_style))
     meth_text = (
         "<b>Match Pressure Index (MPI):</b> Pre-delivery pressure is quantified using state variables strictly known before the ball: <br/>"
         "&bull; <b>Demand (D_t):</b> In Chases, combines Required Run Rate (RRR) relative to venue par, resource depletion (wickets lost 0–9), "
@@ -228,7 +228,10 @@ def generate_pdf_report():
         "&bull; <b>Context-Adjusted Value Added (CAVA):</b> Isolates skill from match conditions by subtracting gradient-boosted expected outcomes: "
         "<code>CAVA_bat = (Runs - E[Runs]) - V_w * (Out - E[Wkt])</code>; <code>CAVA_bowl = (E[Runs] - Runs) + V_w * (Wkt - E[Wkt])</code>.<br/>"
         "&bull; <b>Empirical Bayes Shrinkage & Uncertainty:</b> Raw player means are shrunk toward population priors using match-clustered variance, "
-        "ranking players by the 20th percentile posterior: <code>Score = theta_shrunk - 0.84 * SE_shrunk</code>. Evaluated out-of-time on 2025–2026 matches (RMSE 1.7569, Brier 0.0514)."
+        "ranking players by the 20th percentile posterior: <code>Score = theta_shrunk - 0.84 * SE_shrunk</code>. Evaluated out-of-time on 2025–2026 matches (RMSE 1.7569, Brier 0.0514).<br/>"
+        "&bull; <b>Machine Learning Predictive Suite (HistGradientBoosting):</b> A multiclass classifier was trained on 200,999 deliveries to predict discrete next-ball outcomes "
+        "(Dot, 1-3 Runs, Boundary, Wicket) conditioned on RRR, wickets, phase, and player CAVA ratings. Evaluated on 2025-2026 test set: Multiclass Accuracy = 46.3% (baseline 25.0%), Log Loss = 1.1727. "
+        "A secondary regressor predicts mega-auction market clearing prices and computes the Rajasthan Royals Moneyball Value Index."
     )
     story.append(Paragraph(meth_text, body_style))
     story.append(Spacer(1, 4))
@@ -237,15 +240,16 @@ def generate_pdf_report():
     story.append(Paragraph("4. Franchise Retention Model & Rajasthan Royals Tactical Acquisition Plan", h1_style))
     fit_text = (
         "<b>Why Certain Stars Are Unavailable:</b> Suryakumar Yadav, Jasprit Bumrah, and Ryan Rickelton are contracted pillars of Mumbai Indians; "
-        "Heinrich Klaasen and Abhishek Sharma are retained by Sunrisers Hyderabad; Sunil Narine and Andre Russell are franchise icons of KKR. "
-        "Shaheen Afridi and Sufiyan Muqeem are Pakistani internationals ineligible under BCCI auction rules.<br/>"
+        "Heinrich Klaasen and Abhishek Sharma are retained by Sunrisers Hyderabad; Sunil Narine and Andre Russell are franchise icons of KKR; "
+        "Sanju Samson is contracted with Chennai Super Kings in the IPL 2026 dataset mapping. "
+        "Pakistani players (Shaheen Afridi, Sufiyan Muqeem, Abrar Ahmed, Mohammad Wasim) are strictly excluded from all rankings and auction pools per BCCI IPL policy.<br/>"
         "<b>Rajasthan Royals 2027 Auction Target Strategy:</b><br/>"
         "&bull; <b>Jos Buttler (Marquee Re-acquisition):</b> #1 Target Batter (94.6 CAVA under pressure). Elite anchor and accelerator at Sawai Mansingh Stadium.<br/>"
         "&bull; <b>Reeza Hendricks (International Free Agent):</b> #2 Target Batter. Exceptional 56.5% positive-match clutch share, available at great auction value.<br/>"
         "&bull; <b>Phil Salt (Powerplay Enforcer):</b> #3 Target Batter (Pressure SR 168.4). Obliterates bowling in overs 1-6 to set unbeatable run-chases.<br/>"
         "&bull; <b>Krunal Pandya (Middle-Overs Spin Choke):</b> #1 Target Bowler. Concedes only 6.94 economy in high-leverage situations with elite dot-ball control.<br/>"
         "&bull; <b>Josh Hazlewood & Nathan Ellis (Pace Spearheads):</b> Hazlewood brings robotic Test-match length discipline, while Ellis provides "
-        "back-of-the-hand slower balls and yorkers to form an unbreachable death-overs partnership with Sandeep Sharma."
+        "back-of-the-hand slower balls and yorkers to form an unbreachable death-overs partnership with Sandeep Sharma and Ravindra Jadeja."
     )
     story.append(Paragraph(fit_text, body_style))
     story.append(Spacer(1, 4))
