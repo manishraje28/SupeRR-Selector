@@ -441,12 +441,12 @@ export default function SuperRRDashboard() {
                         {category === "batters" ? (
                           <>
                             <MetricBar label="Pressure Strike Rate" value={(player as any).hp_sr} parValue={142.5} unit=" SR" />
-                            <MetricBar label="Positive Match Contribution" value={player.positive_match_share * 100} parValue={50} unit="%" />
+                            <MetricBar label="Positive Match Contribution" value={(player.positive_match_share || 0) * 100} parValue={50} unit="%" />
                           </>
                         ) : (
                           <>
-                            <MetricBar label="Pressure Economy Rate" value={(player as any).hp_econ} parValue={8.85} unit=" RPO" isLowerBetter />
-                            <MetricBar label="Pressure Dot Ball Share" value={(player as any).dot_pct} parValue={38.0} unit="%" />
+                            <MetricBar label="Pressure Economy Rate" value={(player as any).hp_economy ?? (player as any).hp_econ ?? 8.85} parValue={8.85} unit=" RPO" isLowerBetter />
+                            <MetricBar label="Pressure Dot Ball Share" value={(player as any).dot_pct ?? 38.0} parValue={38.0} unit="%" />
                           </>
                         )}
                       </div>
@@ -459,7 +459,7 @@ export default function SuperRRDashboard() {
                           {category === "batters" ? "Pressure SR" : "Pressure Econ"}
                         </div>
                         <div className="text-sm font-bold text-[#EA1A85] my-0.5">
-                          {category === "batters" ? (player as any).hp_sr : (player as any).hp_econ}
+                          {category === "batters" ? (player as any).hp_sr : ((player as any).hp_economy ?? (player as any).hp_econ ?? 8.5)}
                         </div>
                         <div className="text-[10px] text-slate-500">
                           {category === "batters" ? "Runs / 100b" : "Runs / over"}
@@ -468,7 +468,7 @@ export default function SuperRRDashboard() {
                       <div className="bg-slate-900/60 p-2 rounded-xl">
                         <div className="text-[10px] text-slate-400 uppercase font-semibold">Runs vs Par</div>
                         <div className="text-sm font-bold text-[#38BDF8] my-0.5">
-                          +{player.uplift_cava.toFixed(3)}
+                          +{(player.uplift_cava || 0).toFixed(3)}
                         </div>
                         <div className="text-[10px] text-slate-500">Extra value/ball</div>
                       </div>
@@ -1270,11 +1270,11 @@ export default function SuperRRDashboard() {
                   <div className="mt-4 pt-3 border-t border-white/10 grid grid-cols-3 gap-2 text-center text-xs">
                     <div className="bg-slate-900 p-2 rounded-xl">
                       <div className="text-[10px] text-slate-400 font-semibold">{category === "batters" ? "SR" : "Econ"}</div>
-                      <div className="text-sm font-bold text-white">{category === "batters" ? (p as any).hp_sr : (p as any).hp_econ}</div>
+                      <div className="text-sm font-bold text-white">{category === "batters" ? (p as any).hp_sr : ((p as any).hp_economy ?? (p as any).hp_econ ?? 8.5)}</div>
                     </div>
                     <div className="bg-slate-900 p-2 rounded-xl">
                       <div className="text-[10px] text-slate-400 font-semibold">Uplift</div>
-                      <div className="text-sm font-bold text-emerald-400">+{p.uplift_cava.toFixed(2)}</div>
+                      <div className="text-sm font-bold text-emerald-400">+{(p.uplift_cava || 0).toFixed(2)}</div>
                     </div>
                     <div className="bg-slate-900 p-2 rounded-xl">
                       <div className="text-[10px] text-slate-400 font-semibold">Clutch Rating</div>
@@ -1335,15 +1335,15 @@ export default function SuperRRDashboard() {
                   <div className="mt-4 space-y-2 text-xs">
                     <div className="flex justify-between py-1.5 border-b border-white/5">
                       <span className="text-slate-400">Pressure Performance Score:</span>
-                      <span className="font-bold text-white">{p1.score.toFixed(4)}</span>
+                      <span className="font-bold text-white">{(p1.score || 0).toFixed(4)}</span>
                     </div>
                     <div className="flex justify-between py-1.5 border-b border-white/5">
                       <span className="text-slate-400">Pressure Strike Rate / Econ:</span>
-                      <span className="font-bold text-white">{category === "batters" ? (p1 as any).hp_sr : (p1 as any).hp_econ}</span>
+                      <span className="font-bold text-white">{category === "batters" ? (p1 as any).hp_sr : ((p1 as any).hp_economy ?? (p1 as any).hp_econ ?? 8.5)}</span>
                     </div>
                     <div className="flex justify-between py-1.5 border-b border-white/5">
                       <span className="text-slate-400">Clutch Uplift (vs Base):</span>
-                      <span className="font-bold text-emerald-400">+{p1.uplift_cava.toFixed(3)}</span>
+                      <span className="font-bold text-emerald-400">+{(p1.uplift_cava || 0).toFixed(3)}</span>
                     </div>
                     <div className="flex justify-between py-1.5 border-b border-white/5">
                       <span className="text-slate-400">Auction Availability:</span>
@@ -1365,15 +1365,15 @@ export default function SuperRRDashboard() {
                   <div className="mt-4 space-y-2 text-xs">
                     <div className="flex justify-between py-1.5 border-b border-white/5">
                       <span className="text-slate-400">Pressure Performance Score:</span>
-                      <span className="font-bold text-white">{p2.score.toFixed(4)}</span>
+                      <span className="font-bold text-white">{(p2.score || 0).toFixed(4)}</span>
                     </div>
                     <div className="flex justify-between py-1.5 border-b border-white/5">
                       <span className="text-slate-400">Pressure Strike Rate / Econ:</span>
-                      <span className="font-bold text-white">{category === "batters" ? (p2 as any).hp_sr : (p2 as any).hp_econ}</span>
+                      <span className="font-bold text-white">{category === "batters" ? (p2 as any).hp_sr : ((p2 as any).hp_economy ?? (p2 as any).hp_econ ?? 8.5)}</span>
                     </div>
                     <div className="flex justify-between py-1.5 border-b border-white/5">
                       <span className="text-slate-400">Clutch Uplift (vs Base):</span>
-                      <span className="font-bold text-emerald-400">+{p2.uplift_cava.toFixed(3)}</span>
+                      <span className="font-bold text-emerald-400">+{(p2.uplift_cava || 0).toFixed(3)}</span>
                     </div>
                     <div className="flex justify-between py-1.5 border-b border-white/5">
                       <span className="text-slate-400">Auction Availability:</span>

@@ -653,6 +653,7 @@ for idx, row in df_bowl.iterrows():
         "hp_runs": runs,
         "hp_wickets": wickets,
         "hp_economy": round(econ, 2),
+        "hp_econ": round(econ, 2),
         "dot_pct": round(dot_pct, 1),
         "cava_per_ball": round(cava, 3),
         "uplift_cava": round(uplift, 3),

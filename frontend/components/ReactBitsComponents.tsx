@@ -212,13 +212,15 @@ export function MetricBar({
   isLowerBetter = false
 }: {
   label: string;
-  value: number;
-  parValue: number;
+  value?: number | null;
+  parValue?: number | null;
   unit?: string;
   isLowerBetter?: boolean;
 }) {
-  const isBetter = isLowerBetter ? value <= parValue : value >= parValue;
-  const barPercent = Math.min(100, Math.max(10, (value / (parValue * 1.5)) * 100));
+  const safeVal = typeof value === "number" && !isNaN(value) ? value : 0;
+  const safePar = typeof parValue === "number" && !isNaN(parValue) ? parValue : (safeVal || 1);
+  const isBetter = isLowerBetter ? safeVal <= safePar : safeVal >= safePar;
+  const barPercent = Math.min(100, Math.max(10, safePar > 0 ? (safeVal / (safePar * 1.5)) * 100 : 50));
 
   return (
     <div className="space-y-1 text-xs">
@@ -226,9 +228,9 @@ export function MetricBar({
         <span className="text-slate-400">{label}</span>
         <div className="flex items-center gap-1.5">
           <span className={`font-black ${isBetter ? "text-emerald-400" : "text-rose-400"}`}>
-            {value.toFixed(1)}{unit}
+            {safeVal.toFixed(1)}{unit}
           </span>
-          <span className="text-[10px] text-slate-500 font-mono">(Par: {parValue}{unit})</span>
+          <span className="text-[10px] text-slate-500 font-mono">(Par: {safePar.toFixed(1)}{unit})</span>
         </div>
       </div>
       <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden relative">
