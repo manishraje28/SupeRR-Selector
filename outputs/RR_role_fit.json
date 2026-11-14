@@ -1,0 +1,37 @@
+{
+  "rr_tactical_needs": {
+    "need_1": "Elite Death-Overs Finisher / Pressure Absorber (overs 16-20 high leverage)",
+    "need_2": "Lockdown Death-Overs Yorker Specialist (to partner/complement Sandeep Sharma and Archer/Avesh)",
+    "need_3": "Middle-Overs Attacking Spin Option under Collapse Scenarios"
+  },
+  "recommended_targets_from_evidence": [
+    {
+      "player_name": "Tristan Stubbs",
+      "category": "Batting Finisher",
+      "rank": 3,
+      "role_fit_verdict": "Ideal match for RR finishing role. Proven ability to score at SR 170+ under death-overs pressure with +0.194 CAVA uplift.",
+      "tactical_deployment": "No. 5/6 finisher, handles both high pace and spin at death, acts as second finishing pivot alongside Shimron Hetmyer."
+    },
+    {
+      "player_name": "Heinrich Klaasen",
+      "category": "Middle-Overs Spin Enforcer",
+      "rank": 4,
+      "role_fit_verdict": "Highest middle-overs pressure rating against spin. Obliterates defensive spinner setups in high-demand chases.",
+      "tactical_deployment": "No. 4/5 enforcer, deployed against left-arm orthodox or leg-spin choke points."
+    },
+    {
+      "player_name": "Matheesha Pathirana",
+      "category": "Death Yorker Specialist",
+      "rank": 10,
+      "role_fit_verdict": "Unorthodox sling action delivers 38 pressure wickets with elite dot-ball suppression at the death.",
+      "tactical_deployment": "Bows overs 17 and 19 in high-leverage defenses, creating insurmountable run-rate hurdles."
+    },
+    {
+      "player_name": "Kuldeep Yadav",
+      "category": "Attacking Middle Wrist-Spinner",
+      "rank": 5,
+      "role_fit_verdict": "Highest wicket volume (40 wickets) in high-pressure middle overs, breaking partnerships in chase conditions.",
+      "tactical_deployment": "Bows overs 9, 11, 13, 15 to suppress opponent momentum."
+    }
+  ]
+}

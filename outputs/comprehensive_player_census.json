@@ -1,0 +1,28 @@
+{
+  "title": "SupeRR Selector Season 2 \u2014 Rajasthan Royals IPL 2027 War Room Intelligence Dashboard",
+  "total_players_in_pack": 1217,
+  "deliveries_analyzed": 200999,
+  "matches_analyzed": 883,
+  "data_census": {
+    "registered_players": 1217,
+    "playing_eleven_players": 1082,
+    "total_matches": 883,
+    "total_deliveries": 200999,
+    "unique_strikers": 200,
+    "unique_bowlers": 179,
+    "high_pressure_batters_evaluated": 200,
+    "high_pressure_bowlers_evaluated": 179,
+    "auction_target_batters": 151,
+    "auction_target_bowlers": 143,
+    "rival_retained_batters": 25,
+    "rival_retained_bowlers": 15,
+    "rr_core_players": 20,
+    "bcci_ineligible_players": 25
+  },
+  "model": {
+    "name": "Context-Adjusted Value Added (CAVA) with Match-Level Empirical Bayes Shrinkage",
+    "pressure_threshold_mpi": 0.55,
+    "training_split": "2022-2024 (70th percentile frozen)",
+    "out_of_time_validation": "2025-2026 (RMSE 1.7569, Brier 0.0514)"
+  }
+}

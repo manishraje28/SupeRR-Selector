@@ -1,0 +1,30 @@
+{
+  "training_cutoff_year": 2024,
+  "model_type": "Logistic_Calibrated_Swing_Plus_Demand",
+  "distribution_quantiles": {
+    "p50_median": 0.4159,
+    "p70": 0.5498,
+    "p75": 0.5762,
+    "p80": 0.6084
+  },
+  "frozen_high_pressure_threshold": 0.55,
+  "total_deliveries": 200999,
+  "high_pressure_deliveries_count": 57769,
+  "high_pressure_share_pct": 28.74,
+  "share_by_phase": {
+    "Death": 0.6157,
+    "Middle": 0.2169,
+    "Powerplay": 0.1614
+  },
+  "share_by_innings": {
+    "1": 0.1772,
+    "2": 0.4095,
+    "3": 1.0,
+    "4": 1.0
+  },
+  "share_by_comp": {
+    "IPL": 0.2958,
+    "Other_T20": 0.3045,
+    "T20I": 0.2794
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "evaluation_strategy": "Chronological_Rolling_Origin (Train: 2022-2024, Test: 2025-2026)",
+  "train_matches": 512,
+  "test_matches": 355,
+  "train_deliveries": 120248,
+  "test_deliveries": 80751,
+  "expected_runs_metrics": {
+    "rmse": 1.7569,
+    "mae": 1.301
+  },
+  "expected_wicket_metrics": {
+    "auc_batter_out": 0.5955,
+    "auc_bowler_wkt": 0.5825,
+    "brier_score": 0.0514,
+    "log_loss": 0.2089
+  }
+}

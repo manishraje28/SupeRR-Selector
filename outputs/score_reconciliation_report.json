@@ -1,0 +1,205 @@
+{
+  "total_matches_checked": 867,
+  "sample_reconciled_matches": [
+    {
+      "match_id": 13511,
+      "match_date": "2022-01-22",
+      "home_team": "West Indies",
+      "away_team": "England",
+      "recorded_result": "West Indies Won by 9 Wickets",
+      "inn1_reconstructed": "103/10",
+      "inn2_reconstructed": "104/1",
+      "reconciled": true
+    },
+    {
+      "match_id": 13512,
+      "match_date": "2022-01-23",
+      "home_team": "West Indies",
+      "away_team": "England",
+      "recorded_result": "England Won by 1 Run",
+      "inn1_reconstructed": "171/8",
+      "inn2_reconstructed": "170/8",
+      "reconciled": true
+    },
+    {
+      "match_id": 13513,
+      "match_date": "2022-01-26",
+      "home_team": "West Indies",
+      "away_team": "England",
+      "recorded_result": "West Indies Won by 20 runs",
+      "inn1_reconstructed": "224/5",
+      "inn2_reconstructed": "204/9",
+      "reconciled": true
+    },
+    {
+      "match_id": 13514,
+      "match_date": "2022-01-29",
+      "home_team": "West Indies",
+      "away_team": "England",
+      "recorded_result": "England Won by 34 runs",
+      "inn1_reconstructed": "193/6",
+      "inn2_reconstructed": "159/5",
+      "reconciled": true
+    },
+    {
+      "match_id": 13515,
+      "match_date": "2022-01-30",
+      "home_team": "West Indies",
+      "away_team": "England",
+      "recorded_result": "West Indies Won by 17 runs",
+      "inn1_reconstructed": "179/4",
+      "inn2_reconstructed": "162/10",
+      "reconciled": true
+    },
+    {
+      "match_id": 13522,
+      "match_date": "2022-02-16",
+      "home_team": "India",
+      "away_team": "West Indies",
+      "recorded_result": "India Won by 6 Wickets",
+      "inn1_reconstructed": "157/7",
+      "inn2_reconstructed": "162/4",
+      "reconciled": true
+    },
+    {
+      "match_id": 13523,
+      "match_date": "2022-02-18",
+      "home_team": "India",
+      "away_team": "West Indies",
+      "recorded_result": "India Won by 8 Runs",
+      "inn1_reconstructed": "186/5",
+      "inn2_reconstructed": "178/3",
+      "reconciled": true
+    },
+    {
+      "match_id": 13524,
+      "match_date": "2022-02-20",
+      "home_team": "India",
+      "away_team": "West Indies",
+      "recorded_result": "India Won by 17 runs",
+      "inn1_reconstructed": "184/5",
+      "inn2_reconstructed": "167/9",
+      "reconciled": true
+    },
+    {
+      "match_id": 13612,
+      "match_date": "2022-02-11",
+      "home_team": "Australia",
+      "away_team": "Sri Lanka",
+      "recorded_result": "Australia Won by 20 runs (D/L method)",
+      "inn1_reconstructed": "149/9",
+      "inn2_reconstructed": "122/8",
+      "reconciled": true
+    },
+    {
+      "match_id": 13613,
+      "match_date": "2022-02-13",
+      "home_team": "Australia",
+      "away_team": "Sri Lanka",
+      "recorded_result": "Australia Won the one over Eliminator",
+      "inn1_reconstructed": "164/6",
+      "inn2_reconstructed": "164/8",
+      "reconciled": true
+    },
+    {
+      "match_id": 13614,
+      "match_date": "2022-02-15",
+      "home_team": "Australia",
+      "away_team": "Sri Lanka",
+      "recorded_result": "Australia Won by 6 Wkts",
+      "inn1_reconstructed": "121/6",
+      "inn2_reconstructed": "124/4",
+      "reconciled": true
+    },
+    {
+      "match_id": 13615,
+      "match_date": "2022-02-18",
+      "home_team": "Australia",
+      "away_team": "Sri Lanka",
+      "recorded_result": "Australia Won by 6 Wickets",
+      "inn1_reconstructed": "139/8",
+      "inn2_reconstructed": "143/4",
+      "reconciled": true
+    },
+    {
+      "match_id": 13616,
+      "match_date": "2022-02-20",
+      "home_team": "Australia",
+      "away_team": "Sri Lanka",
+      "recorded_result": "Sri Lanka Won by 5 wickets",
+      "inn1_reconstructed": "154/6",
+      "inn2_reconstructed": "155/5",
+      "reconciled": true
+    },
+    {
+      "match_id": 14094,
+      "match_date": "2022-03-26",
+      "home_team": "Chennai Super Kings",
+      "away_team": "Kolkata Knight Riders",
+      "recorded_result": "Kolkata Knight Riders Won by 6 Wkts",
+      "inn1_reconstructed": "131/5",
+      "inn2_reconstructed": "133/4",
+      "reconciled": true
+    },
+    {
+      "match_id": 14095,
+      "match_date": "2022-03-27",
+      "home_team": "Delhi Capitals",
+      "away_team": "Mumbai Indians",
+      "recorded_result": "Delhi Capitals Won by 4 Wickets",
+      "inn1_reconstructed": "177/5",
+      "inn2_reconstructed": "179/6",
+      "reconciled": true
+    },
+    {
+      "match_id": 14096,
+      "match_date": "2022-03-27",
+      "home_team": "Punjab Kings",
+      "away_team": "Royal Challengers Bengaluru",
+      "recorded_result": "Punjab Kings Won by 5 Wkts",
+      "inn1_reconstructed": "205/2",
+      "inn2_reconstructed": "208/5",
+      "reconciled": true
+    },
+    {
+      "match_id": 14097,
+      "match_date": "2022-03-28",
+      "home_team": "Gujarat Titans",
+      "away_team": "Lucknow Super Giants",
+      "recorded_result": "Gujarat Titans Won by 5 Wickets",
+      "inn1_reconstructed": "158/6",
+      "inn2_reconstructed": "161/5",
+      "reconciled": true
+    },
+    {
+      "match_id": 14098,
+      "match_date": "2022-03-29",
+      "home_team": "Sunrisers Hyderabad",
+      "away_team": "Rajasthan Royals",
+      "recorded_result": "Rajasthan Royals Won by 61 Runs",
+      "inn1_reconstructed": "210/6",
+      "inn2_reconstructed": "149/7",
+      "reconciled": true
+    },
+    {
+      "match_id": 14099,
+      "match_date": "2022-03-30",
+      "home_team": "Royal Challengers Bengaluru",
+      "away_team": "Kolkata Knight Riders",
+      "recorded_result": "Royal Challengers Bengaluru Won 3 Wkts",
+      "inn1_reconstructed": "128/10",
+      "inn2_reconstructed": "132/7",
+      "reconciled": true
+    },
+    {
+      "match_id": 14100,
+      "match_date": "2022-03-31",
+      "home_team": "Lucknow Super Giants",
+      "away_team": "Chennai Super Kings",
+      "recorded_result": "Lucknow Super Giants Won by 6 Wkts",
+      "inn1_reconstructed": "210/7",
+      "inn2_reconstructed": "211/4",
+      "reconciled": true
+    }
+  ]
+}

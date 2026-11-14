@@ -1,0 +1,9 @@
+{
+  "top_10_batters_unique_count": 10,
+  "top_10_bowlers_unique_count": 10,
+  "repeated_in_batting_list": false,
+  "repeated_in_bowling_list": false,
+  "cross_list_overlap": [],
+  "rankings_generated_from_code_only": true,
+  "all_players_in_unstop_mapping": true
+}

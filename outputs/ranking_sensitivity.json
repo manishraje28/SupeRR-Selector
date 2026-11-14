@@ -1,0 +1,72 @@
+{
+  "threshold_balls_60": {
+    "top_5_batters": [
+      "Vaibhav Sooryavanshi",
+      "Akeal Hosein",
+      "Sameer Rizvi",
+      "Phil Salt",
+      "Reeza Hendricks"
+    ],
+    "top_5_bowlers": [
+      "Jamie Overton",
+      "Sufiyan Muqeem",
+      "Umran Malik",
+      "Krunal Pandya",
+      "Sakib Hussain"
+    ],
+    "eligible_batters": 240,
+    "eligible_bowlers": 213
+  },
+  "threshold_balls_80": {
+    "top_5_batters": [
+      "Vaibhav Sooryavanshi",
+      "Akeal Hosein",
+      "Sameer Rizvi",
+      "Phil Salt",
+      "Reeza Hendricks"
+    ],
+    "top_5_bowlers": [
+      "Jamie Overton",
+      "Sufiyan Muqeem",
+      "Umran Malik",
+      "Krunal Pandya",
+      "Abrar Ahmed"
+    ],
+    "eligible_batters": 203,
+    "eligible_bowlers": 181
+  },
+  "threshold_balls_100": {
+    "top_5_batters": [
+      "Vaibhav Sooryavanshi",
+      "Sameer Rizvi",
+      "Phil Salt",
+      "Reeza Hendricks",
+      "Suryakumar Yadav"
+    ],
+    "top_5_bowlers": [
+      "Jamie Overton",
+      "Sufiyan Muqeem",
+      "Umran Malik",
+      "Krunal Pandya",
+      "Abrar Ahmed"
+    ],
+    "eligible_batters": 174,
+    "eligible_bowlers": 163
+  },
+  "ipl_only_top5": {
+    "batters": [
+      "Vaibhav Sooryavanshi",
+      "Ryan Rickelton",
+      "Phil Salt",
+      "Corbin Bosch",
+      "Sameer Rizvi"
+    ],
+    "bowlers": [
+      "Umran Malik",
+      "Lungi Ngidi",
+      "Krunal Pandya",
+      "Sakib Hussain",
+      "Sunil Narine"
+    ]
+  }
+}

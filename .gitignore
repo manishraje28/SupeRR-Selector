@@ -1,0 +1,36 @@
+# Proprietary Competition Data (Strictly Confidential per RR rules)
+Data Pack/
+data_processed/
+*.parquet
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+.pnpm-store/
+
+# Next.js build outputs
+frontend/.next/
+frontend/out/
+
+# Python cache & virtual environments
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# OS and IDE files
+.DS_Store
+__MACOSX/
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

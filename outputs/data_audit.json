@@ -1,0 +1,303 @@
+{
+  "metadata": {
+    "audit_timestamp": "2026-11-13T21:48:00+05:30",
+    "data_pack_path": "Data Pack",
+    "total_files": 7
+  },
+  "file_inventory": {
+    "ball_by_ball.csv": {
+      "file_size_bytes": 41071837,
+      "row_count": 200999,
+      "col_count": 33,
+      "unique_matches": 867,
+      "unique_strikers": 888,
+      "unique_bowlers": 647,
+      "min_date_delivery": "2022-01-23 00:00:00 UTC",
+      "max_date_delivery": "2026-11-01 16:50:46 UTC"
+    },
+    "matches.csv": {
+      "file_size_bytes": 123864,
+      "row_count": 883,
+      "col_count": 22,
+      "unique_matches": 883,
+      "min_match_date": "2022-01-22",
+      "max_match_date": "2026-11-01",
+      "ipl_matches": 371,
+      "t20i_matches": 482,
+      "other_t20_matches": 30,
+      "abandoned_matches_count": 16
+    },
+    "competitions.csv": {
+      "file_size_bytes": 7624,
+      "row_count": 141,
+      "col_count": 4,
+      "unique_comp_ids": 141,
+      "formats": {
+        "T20I": 134,
+        "T20": 7
+      },
+      "seasons": [
+        "2022",
+        "2022/23",
+        "2023",
+        "2023/24",
+        "2024",
+        "2024/25",
+        "2025",
+        "2026"
+      ]
+    },
+    "playing_eleven.csv": {
+      "file_size_bytes": 966287,
+      "row_count": 28381,
+      "col_count": 9,
+      "unique_matches": 880,
+      "unique_players": 1082,
+      "duplicate_keys_count": 75,
+      "duplicate_unique_keys": 40
+    },
+    "teams.csv": {
+      "file_size_bytes": 6922,
+      "row_count": 353,
+      "col_count": 3,
+      "unique_teams": 38
+    },
+    "competition_team_player_mapping.csv": {
+      "file_size_bytes": 462969,
+      "row_count": 6413,
+      "col_count": 6,
+      "unique_players": 1217,
+      "unique_teams": 38,
+      "unique_competitions": 140
+    },
+    "Round 1 Problem Statement _ SupeRR Selector Season 2.docx.pdf": {
+      "file_size_bytes": 254082,
+      "pages": 2,
+      "status": "verified_and_read"
+    }
+  },
+  "data_hygiene_and_semantics": {
+    "abandoned_matches": [
+      {
+        "match_id": 31281,
+        "match_date": "2024-05-13",
+        "comp_id": 2193,
+        "home_team": "Gujarat Titans",
+        "away_team": "Kolkata Knight Riders",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 31284,
+        "match_date": "2024-05-16",
+        "comp_id": 2193,
+        "home_team": "Sunrisers Hyderabad",
+        "away_team": "Gujarat Titans",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 31288,
+        "match_date": "2024-05-19",
+        "comp_id": 2193,
+        "home_team": "Rajasthan Royals",
+        "away_team": "Kolkata Knight Riders",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 32610,
+        "match_date": "2024-05-22",
+        "comp_id": 2354,
+        "home_team": "England",
+        "away_team": "Pakistan",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 32612,
+        "match_date": "2024-05-28",
+        "comp_id": 2354,
+        "home_team": "England",
+        "away_team": "Pakistan",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 32622,
+        "match_date": "2024-05-20",
+        "comp_id": 2398,
+        "home_team": "Ireland",
+        "away_team": "Scotland",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 38797,
+        "match_date": "2024-12-14",
+        "comp_id": 2442,
+        "home_team": "South Africa",
+        "away_team": "Pakistan",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 36564,
+        "match_date": "2024-09-15",
+        "comp_id": 2548,
+        "home_team": "England",
+        "away_team": "Australia",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 36210,
+        "match_date": "2025-09-14",
+        "comp_id": 2628,
+        "home_team": "England",
+        "away_team": "South Africa",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 40761,
+        "match_date": "2025-05-17",
+        "comp_id": 2725,
+        "home_team": "Royal Challengers Bengaluru",
+        "away_team": "Kolkata Knight Riders",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 41502,
+        "match_date": "2025-06-12",
+        "comp_id": 2873,
+        "home_team": "Ireland",
+        "away_team": "West Indies",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 41503,
+        "match_date": "2025-06-14",
+        "comp_id": 2873,
+        "home_team": "Ireland",
+        "away_team": "West Indies",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 42030,
+        "match_date": "2025-12-17",
+        "comp_id": 2921,
+        "home_team": "India",
+        "away_team": "South Africa",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 46008,
+        "match_date": "2025-09-19",
+        "comp_id": 3174,
+        "home_team": "Ireland",
+        "away_team": "England",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 48513,
+        "match_date": "2026-01-10",
+        "comp_id": 3317,
+        "home_team": "Sri Lanka",
+        "away_team": "Pakistan",
+        "result": "Match Abandoned"
+      },
+      {
+        "match_id": 50189,
+        "match_date": "2026-04-29",
+        "comp_id": 3433,
+        "home_team": "Bangladesh",
+        "away_team": "New Zealand",
+        "result": "Match Abandoned"
+      }
+    ],
+    "extras_semantics": {
+      "None": {
+        "count": 189167,
+        "extras1_sum": 1,
+        "extras2_sum": 1,
+        "runs_sum": 268285
+      },
+      "Overstep": {
+        "count": 576,
+        "extras1_sum": 576,
+        "extras2_sum": 48,
+        "runs_sum": 852
+      },
+      "Penalty": {
+        "count": 1,
+        "extras1_sum": 5,
+        "extras2_sum": 0,
+        "runs_sum": 0
+      },
+      "byes": {
+        "count": 529,
+        "extras1_sum": 1000,
+        "extras2_sum": 0,
+        "runs_sum": 0
+      },
+      "legbyes": {
+        "count": 2748,
+        "extras1_sum": 3603,
+        "extras2_sum": 0,
+        "runs_sum": 1
+      },
+      "other": {
+        "count": 264,
+        "extras1_sum": 264,
+        "extras2_sum": 35,
+        "runs_sum": 412
+      },
+      "wide": {
+        "count": 7714,
+        "extras1_sum": 9174,
+        "extras2_sum": 0,
+        "runs_sum": 0
+      }
+    },
+    "dismissal_semantics": {
+      "Bowled": {
+        "count": 1775,
+        "is_wicket_sum": 1775
+      },
+      "Caught": {
+        "count": 7557,
+        "is_wicket_sum": 7557
+      },
+      "Hit Wicket": {
+        "count": 17,
+        "is_wicket_sum": 17
+      },
+      "LBW": {
+        "count": 709,
+        "is_wicket_sum": 709
+      },
+      "None": {
+        "count": 190118,
+        "is_wicket_sum": 0
+      },
+      "Obstracting the field": {
+        "count": 2,
+        "is_wicket_sum": 2
+      },
+      "Obstructing the field": {
+        "count": 1,
+        "is_wicket_sum": 1
+      },
+      "Retire Out": {
+        "count": 6,
+        "is_wicket_sum": 6
+      },
+      "RunOut": {
+        "count": 600,
+        "is_wicket_sum": 600
+      },
+      "Stump": {
+        "count": 214,
+        "is_wicket_sum": 214
+      }
+    },
+    "revised_match_semantics": {
+      "unit": "legal balls (e.g. 90.0 = 15 overs, 30.0 = 5 overs)",
+      "matches_with_revised_target": 23,
+      "matches_with_revised_overs_inn1": 25,
+      "matches_with_revised_overs_inn2": 25
+    }
+  }
+}
