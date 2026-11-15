@@ -38,4 +38,6 @@ pnpm-debug.log*
 # Video intermediates
 outputs/video_frames/
 outputs/video_slides.txt
+brag-output/work/
+
 
