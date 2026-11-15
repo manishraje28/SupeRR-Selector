@@ -34,3 +34,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Video intermediates
+outputs/video_frames/
+outputs/video_slides.txt
+
